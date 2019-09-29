@@ -1,0 +1,177 @@
+﻿作者：黄小伟
+链接：https://zhuanlan.zhihu.com/p/82271957
+来源：知乎
+著作权归作者所有，转载请联系作者获得授权。
+
+近年来，身边越来越多朋友跟我请教，如何快速成长为数据分析人员。其实学习没有捷径，如何合格的数据分析人员，让我们先看摘自《数据科学实战》一书中的关于数据科学技能与自我认知的主要元素：
+
+
+
+
+可见要想成为合格的数据分析师，我们需要具备一定的数学、统计学、计算机能力，还需要具备以下的数据处理、建模、可视化等扩展能力。
+
+
+
+
+
+
+还需要熟练掌握一门工具，能将你的想法迅速实现。这几年流行的R和python都是不错的选择，如果你是期望从事与数据分析、挖掘相关的工作，建议可将R作为首选工具，其丰富的扩展包可以高效进行数据处理及建模，让你将更多的时间专注在业务和数据本身。
+
+使用R语言进行数据挖掘的各个环节如下：
+
+
+
+
+在数据处理方面，R语言在数据概要、数据变换、数据清洗和数据抽样等有非常丰富的选择，让我们能对数据进行高效处理，达到数据分析和建模的目的。
+
+
+
+
+数据概要相对来说比较简单，我们以对数变换来提高模型准确性的例子。
+
+在R的扩展包ggplot2中自带了一份钻石数据集(diamonds)，我们从中抽取1000个样本最为研究对象，研究数据中变量carat(克拉数)、price(价格)的数据分布情况，并研究两者之间的关系，最后利用克拉数预测钻石的价格。
+
+library(ggplot2)
+> set.seed(1234)
+> dsmall <- diamonds[sample(1:nrow(diamonds),1000),] # 数据抽样
+> head(dsmall) # 查看数据前六行
+      carat     cut color clarity depth table price    x    y    z
+6134   0.91   Ideal     G     SI2  61.6    56  3985 6.24 6.22 3.84
+33567  0.43 Premium     D     SI1  60.1    58   830 4.89 4.93 2.95
+32864  0.32   Ideal     D     VS2  61.5    55   808 4.43 4.45 2.73
+33624  0.33   Ideal     G     SI2  61.7    55   463 4.46 4.48 2.76
+46435  0.70    Good     H     SI1  64.2    58  1771 5.59 5.62 3.60
+34536  0.33   Ideal     G    VVS1  61.8    55   868 4.42 4.45 2.74
+> par(mfrow = c(1,2))
+> plot(density(dsmall$carat),main = "carat变量的正态分布曲线") # 绘制carat变量的正态分布曲线 
+> plot(density(dsmall$price),main = "price变量的正态分布曲线") # 绘制price变量的正态分布曲线 
+> par(mfrow = c(1,1))
+
+
+
+从正态分布图可见，变量carat和price均是严重不对称分布。此时我们利用R语言中的log函数对两者进行对数转换，再次绘制正态密度图。
+
+> par(mfrow = c(1,2))
+> plot(density(log(dsmall$carat)),main = "carat变量取对数后的正态分布曲线") 
+> plot(density(log(dsmall$price)),main = "price变量取对数后的正态分布曲线") 
+> par(mfrow = c(1,1))
+
+
+
+可见，经过对数处理后，两者的正态分布密度曲线就对称很多。最后，让我们一起来验证对原始数据建立线性回归模型与经过对数变量后再建模的区别。
+
+> # 建立线性回归模型
+> fit1 <- lm(dsmall$price~dsmall$carat,data = dsmall) # 对原始变量进行建模
+> summary(fit1) # 查看模型详细结果
+
+Call:
+lm(formula = dsmall$price ~ dsmall$carat, data = dsmall)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-8854.8  -821.9   -42.2   576.0  8234.2 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  -2391.74      97.44  -24.55   <2e-16 ***
+dsmall$carat  7955.35     104.45   76.16   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1582 on 998 degrees of freedom
+Multiple R-squared:  0.8532,	Adjusted R-squared:  0.8531 
+F-statistic:  5801 on 1 and 998 DF,  p-value: < 2.2e-16
+
+> fit2 <-lm(log(dsmall$price)~log(dsmall$carat),data=dsmall) # 对两者进行曲对数后再建模
+> summary(fit2) # 查看模型结果
+
+Call:
+lm(formula = log(dsmall$price) ~ log(dsmall$carat), data = dsmall)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.07065 -0.16438 -0.01159  0.16476  0.83140 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(>|t|)    
+(Intercept)       8.451358   0.009937   850.5   <2e-16 ***
+log(dsmall$carat) 1.686009   0.014135   119.3   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2608 on 998 degrees of freedom
+Multiple R-squared:  0.9345,	Adjusted R-squared:  0.9344 
+F-statistic: 1.423e+04 on 1 and 998 DF,  p-value: < 2.2e-16
+通过对比Multiple R-squared发现，模型1的R平方是0.8532，模型2的R平方是0.9345，R平方的值是越接近1说明模型拟合的越好，所以经过对数处理后建立的模型2优于模型1。我们也可以通过在散点图绘制拟合曲线的可视化方式进行查看。
+
+> # 在散点图中 绘制拟合曲线
+> par(mfrow=c(1,2))
+> plot(dsmall$carat,dsmall$price,
++      main = "未处理的散点图及拟合直线")
+> abline(fit1,col="red",lwd=2)
+> plot(log(dsmall$carat),log(dsmall$price),
++      main = "取对数后的散点图及拟合直线")
+> abline(fit2,col="red",lwd=2)
+> par(mfrow=c(1,1)
+
+
+
+可见，取对数后绘制的散点更集中在红色的线性回归线上。
+
+
+
+在做完数据处理后，我们就可以对数据进行分析和建模，R语言拥有非常丰富的算法包，可以实现各种流行的模型算法。下图是国际权威的学术组织the IEEEInternational Conference on Data Mining (ICDM) 2006年12月评选出了数据挖掘领域的十大经典算法：C4.5, k-Means,SVM, Apriori, EM,PageRank, AdaBoost, kNN, Naive Bayes,and CART.它们在数据挖掘领域都产生了极为深远的影响。
+
+
+
+
+
+
+以上这些经典算法在R中均有相应函数实现，可以说在R中建模基本是一个函数，一个命令就可以搞定。我们就举无监督模型中最常用的聚类分析和关联规则为例来说明。利用kmeans函数可以实现k-均值聚类，hclust函数可以实现层次聚类：
+
+
+
+
+利用arules函数可以构建关联规则，arulesViz包中plot函数可以对关联规则进行可视化。
+
+
+
+
+综上所述，想要成为“数据达人”，只需要你有足够的热情，有一定的数学、统计学和编程能力，再集合你所熟悉的工具，就能快速完成你想要做的分析工作。大家如果对如何快速入门数据挖掘，可以关注4月18日晚上的公开课，以上内容均会在公开课中详细讲解。
+
+当然，我们在做数据分析前，需要结合业务，从业务角度出发，构建出适合业务所需的模型，不一定需要用到上面提到的这些专业模型。
+
+有时候，我们也可以利用简单的数据分析技术就能得出有价值的知识。例如对新增用户、ARPPU、次日留存率绘制气泡图，查看不同渠道的新增用户质量。
+
+
+
+
+可见，渠道10虽然日均新增用户最少，但是次日留存率最高，说明渠道10的用户黏性高于其他渠道，渠道8的气泡最大，说明其ARPPU大于其他渠道，该渠道的付费能力最强。渠道5的次日留存率只有27.86%，渠道的用户回头率低，且ARPPU处于中下水平，说明该游戏在渠道5的用户质量较差。
+
+更一般地，我们可以将电信、金融行业用来识别用户价值的四象限图（Median-IQR）用在游戏数据中。比如让我们利用Median-IQR方法分析ARPPU、ARPU、新增次日留存率和新增七日留存率等指标，查看不同渠道在一月份数据的集中及离散程度。这里使用中位数作为衡量中心的统计量，应用四分位距（IQR）作为离散指标的统计量更有意义。与更常用的的均值和标准差相比，这些统计量在有离群值存在时更加稳健。
+
+> # 对各指标绘制四象限图，查看渠道分布情况
+> # 将需要绘制四象限图的指标赋予name对象
+> name <- c("ARPPU","ARPU","新增次日留存率","新增7日留存率")
+> # 利用for循环绘制四个四象限分布图
+> par(mfrow = c(2,2))
+> for(i in 1:4){
++   plot(result[,2*i],result[,2*i+1],type = "n",
++        xlim=c(0.95*min(result[,2*i]),1.05*max(result[,2*i])), # 设置横轴坐标轴范围
++        ylim=c(0.95*min(result[,2*i+1]),1.05*max(result[,2*i+1])), #设置纵轴坐标轴范围
++        main = paste0(name[i],"四象限图"), 
++        xlab = "中位数值",ylab = "四分位距值") #绘制散点图 
++   abline(v = mean(result[,2*i]),lty = 2,col = "green") # 添加垂直直线
++   abline(h = mean(result[,2*i+1]),lty = 2,col = "blue")  # 添加水平直线
++   text(result[,2*i],result[,2*i+1],result[,1],
++        col = "black",cex = 0.8,font=2) # 在图中打印出渠道名称
++ }
+> par(mfrow=c(1,1))
+
+
+
+可见，渠道H属于低价值用户，该渠道的ARPPU、新增次日留存率和新增7日留存率均低于其他渠道，说明该渠道的付费用户的人均付费额不高，且新增用户的黏性也低于其他渠道，虽然ARPU的中位数高于其他渠道，但是波动性也大，说明不同日期的活跃用户人均付费额变化大，可能由于运营在该渠道做活动导致，但是也不排除有部分用户进行刷道具行为，需要引起警惕。渠道A和渠道C同属于用户黏性高的渠道，因它们在新增用户次日留存率和新增7日留存率的中位数均高于其他渠道，且IQR值相对较小（但渠道A在新增次日留存率波动略大），综合来说这两个指标数据表现稳定；渠道D在新增次日留存率和新增7日留存率的IQR值很大，说明波动大，可能存在某些天数有用户刷量导致留存率异常。
+
+
+
+数据分析并不是高高在上，不可触及的东西。随着现在方法论的成熟、工具的便捷，只要大家平时多用心去观察数据，在掌握了基本的数据分析方法论后，就能根据业务完成数据分析的工作。

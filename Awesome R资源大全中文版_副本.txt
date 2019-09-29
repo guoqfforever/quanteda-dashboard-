@@ -1,0 +1,1248 @@
+﻿作者：李晓文
+链接：https://zhuanlan.zhihu.com/p/24747376
+来源：知乎
+著作权归作者所有，转载请联系作者获得授权。
+
+0.前言
+　　虽然很早就知道R被微软收购，也很早知道R在统计分析处理方面很强大，开始一直没有行动过。。。直到
+
+　　直到12月初在微软技术大会，看到我软的工程师演示R的使用，我就震惊了，然后最近在网上到处了解和爬一些R的资料，看着看着就入迷了，这就是个大宝库了，以前怎么没发现，看来还是太狭隘了。直到前几天我看到这个Awesome R文档，我就静不下来了，对比了目前自己的工作和以后的方向，非常适合我。所以毫不犹豫的把这个文档汉化了，所以大家一起享受吧。
+
+说明：本文已经提交到github，地址：asxinyu/awesome-R ，由于个人知识和能力限制，部分组件特别是机器学习方面比较专业的术语无法翻译，如果有懂的朋友可以留言或者在github直接修改。一起完善。
+
+这里有很多非常不错的R包和工具. 该想法来自于awesome-machine-learning.
+
+这里是包的导航清单，看起来更方便 Awesome R - Find Great R Packages
+
+　　通过这些翻译了解这些工具包，以后干活也就方便多了。不过翻译这个东西的确要靠耐心，翻译，编辑花费了至少一周的空余时间。　　
+
+　　在编辑本文的过程中，惊喜的发现原来 伯乐在线 也在翻译Awesome系列的其他资源：地址在github：
+
+1.jobbole/awesome-dotnet-cn
+
+2.jobbole/awesome-java-cnJava资源大全中文版（Awesome最新版） - 张果 - 博客园
+
+3.https://github.com/jobbole/awesome-javascript-cn
+
+JavaScript资源大全中文版（Awesome最新版） - 张果 - 博客园
+
+1.集成开发环境
+RStudio - 一个非常强大高效的图形界面开发环境，可以在Windows, Mac, 和Linux运行. 官网：Home
+Emacs + ESS - ESS是一个emacs文本编辑器的一个统计分析的插件. 官网：Emacs Speaks Statistics
+Sublime Text + R-Box - 一个在Sublime 2/3中使用R语言编程的插件. 官网：randy3k/R-Box
+TextMate + r.tmblundle - TextMate 1/2的插件. 官网：textmate/r.tmbundle
+StatET - 一个基于Eclipse的R语言IDE. 官网：WalWare - Homepage
+Revolution R Enterprise - 专注于大数据,大规模多处理器的功能,可以对学术用户免费提供和商业使用. 官网：R Server Overview-R Data Analysis
+R Commander - 一个包括基本图形用户界面的R包. 官网：R Commander
+IRkernel - Jupyter的R语言内核. 官网：IRkernel/IRkernel
+Deducer - 一个菜单驱动的数据分析的GUI工具,类似电子表格数据编辑器. 官网：Deducer: A GUI for R
+Radiant - 一个使用R语言，独立的基于浏览器接口的业务分析平台,基于Shiny. 官网：Radiant - Business analytics using R and Shiny
+Vim-R - Vim中R语言插件. 官网：vim-scripts/Vim-R-plugin
+Nvim-R - Neovim中R语言插件. 官网：jalvesaq/Nvim-R
+JASP - 一个完整的贝叶斯和概念论相关方法的R包,和使用SPSS非常相似。 官网：A Fresh Way to Do Statistics
+Bio7 - 一个包括创建,科学图像分析和统计分析的IDE. 官网：http://www.bio7.org/
+RTVS - Visual Studio中R开发工具. 官网：Welcome to R Tools for Visual Studio Preview!
+2.语法
+magrittr - 一个R语言高效的管道操作包. 官网：tidyverse/magrittr
+pipeR - 多泛型管道的实现. 官网：renkun-ken/pipeR
+lambda.r - R语言中函数式编程和简单的模式匹配. 官网：zatonovo/lambda.r
+purrr - 一个高级函数编程语言包. 官网：hadley/purrr
+3.数据操作
+dplyr - 快速数据操作和数据库查询. 官网：hadley/dplyr
+data.table - 使用短小灵活的语法操作数据. 官网：Rdatatable/data.table
+reshape2 - 灵活的数据排列,聚合处理. 官网：hadley/reshape
+readr - 一个快速简单的读取表格数据到R中的包. 官网：​tidyverse/readr
+haven - 对导入SPSS,STATA和SAS的文件进行改进. 官网：tidyverse/haven
+tidyr - 方便对数据进行整理、传播和收集. 官网：tidyverse/tidyr
+broom - 将统计分析对象转换成整齐的数据框(一种数据组织和呈现的方式). 官网：tidyverse/broom
+rlist - 一个操作非规范化数据的工具箱. 官网：renkun-ken/rlist
+jsonlite - 一个快速解析JSON文件的包. 官网：jeroenooms/jsonlite
+ff - 设计用来存储大型数据集的数据结构. 官网：ff
+lubridate - 一组日期和时间函数. 官网：CRAN - Package lubridate
+stringi - 基于ICU的字符串处理方案. 官网：stringi: THE string processing package for R
+stringr - 基于stringi之上的对字符串处理API. 官网：tidyverse/stringr
+bigmemory - 提供共享内存和内存映射矩阵,同时也包提供额外的工具,包括线性模型.(biglm) 和随机森林 (bigrf). 官网：CRAN - Package bigmemory
+fuzzyjoin - 使用不精确匹配的方式连接表数据. 官网：dgrtwo/fuzzyjoin
+tidyverse - 简单从tidyverse下载和安装包. 官网：​tidyverse/tidyverse
+4.图形显示
+ggplot2 - 强大的绘图统计和计算图形系统的实现.强烈推荐. 官网：​tidyverse/ggplot2
+ggfortify -一个ggplot2(流行的统计软件包)统一的接口(使用一行代码即可). 官网：​sinhrks/ggfortify
+ggrepel - 排除重叠的文本标签. 官网：​slowkow/ggrepel
+ggalt - ggplot2额外的坐标系统,几何和统计. 官网：​hrbrmstr/ggalt
+ggtree - 可视化和注释的系统树. 官网：​GuangchuangYu/ggtree
+ggplot2 Extensions - ggplot2扩展显示例子. 官网：​ggplot2 extensions
+lattice - 一个强大优雅的高级数据可视化系统. 官网：​trellis graphics for R
+corrplot - 图形显示相关矩阵或一般矩阵。它还包含一些矩阵重新排序算法. 官网：​taiyun/corrplot
+rgl - R中3D可视化系统. 官网：​CRAN - Package rgl
+Cairo - 一个使用cairo组件创建高质量显示输出的R图形包. 官网：​CRAN - Package Cairo
+extrafont - 在R中图像中使用字体的工具. 官网：​wch/extrafont
+showtext - 让R图形设备显示文本的时候使用系统字体. 官网：​yixuan/showtext
+animation - 一个使用 ImageMagick在R中产生动画图形的工具. 官网：​animation by yihui
+gganimate - 用ggplot2创建简单的动画. 官网：​dgrtwo/gganimate
+misc3d - 强大的3D绘图工具. 官网：​CRAN - Package misc3d
+xkcd - 在图表中使用xkcd风格. 官网：​CRAN - Package xkcd
+imager - 一个基于CImg库的图像处理包. 官网：http://dahtah.github.io/imager/
+5.HTML部件
+d3heatmap - 使用D3绘制互动的热图. 官网：rstudio/d3heatmap
+DataTables - 将R矩阵或数据框作为交互的HTML表. 官网：DT: An R interface to the DataTables library
+DiagrammeR - 在R中创建JS图表和流程图. 官网：​rich-iannone/DiagrammeR
+dygraphs - 在R中绘制时间序列数据图形. 官网：​rstudio/dygraphs
+formattable - 可格式化的数据结构. 官网：​formattable by renkun-ken
+ggvis - R中交互式的图形处理语法. 官网：​rstudio/ggvis
+Leaflet - 一个非常流行的交互式地图JavaScript组件. 官网：​Leaflet for R - Introduction
+MetricsGraphics - 可以轻松创建D3散点图、折线图和直方图. 官网：​http://hrbrmstr.github.io/metricsgraphics/
+networkD3 - D3 JavaScriptR网络图. 官网：​http://christophergandrud.github.io/networkD3/
+scatterD3 - D3 互动散点图. 官网：​juba/scatterD3
+plotly - 使用plot.ly进行交互式ggplot2和Shiny绘图. 官网：​ropensci/plotly
+rCharts - 交互式JS绘图. 官网：​ramnathv/rCharts
+rbokeh - Bokeh的R接口. 官网：​rbokeh
+threejs - 交互式3D散点图和地球仪. 官网：​bwlewis/rthreejs
+timevis - 创建完全交互式的时间轴可视化图形. 官网：​daattali/timevis
+visNetwork - 使用vis.js类库进行网络可视化. 官网：​datastorm-open/visNetwork
+6.复用组件研究
+knitr - R中简单的动态报表生成工具. 官网：​knitr: Elegant, flexible and fast dynamic report generation with R
+xtable - 将表格导出到LaTeX或者HTML. 官网：​CRAN - Package xtable
+rapport - 一个R模版系统. 官网：​rapport: an R templating system
+rmarkdown - R动态文档工具. 官网：R Markdown
+slidify - 创建和发布漂亮的html5展示效果. 官网：​ramnathv/slidify
+Sweave - 使用R创建LaTeX报表的R包. 官网：​LMU - Prof. Friedrich Leisch
+texreg - 在LaTex和HTML中格式化统计模型. 官网：​texreg: Conversion of Statistical Model Output in R to LaTeX and HTML Tables
+checkpoint - 从检查点快照服务器安装包. 官网：​RevolutionAnalytics/checkpoint
+brew - 报告模板的生成框架.可以和knitr合并. 官网：​CRAN - Package brew
+ReporteRs - 一个生成微软Word, PowerPoint和HTML报表的R包. 官网：​Microsoft Word and PowerPoint Documents Generation • ReporteRs package
+bookdown - 使用R Markdown编写书籍. 官网：​bookdown: Easy Book Publishing with R Markdown
+ezknitr - 避免使用'knitr'带来的工作目录的痛苦. 官网：​ropensci/ezknitr
+7.Web技术和服务
+Web Technologies List - 关于如何使用R和网络的相关信息. 官网：​ropensci/webservices
+shiny - 使用R创建简单的Web交互应用. 官网：​rstudio/shiny
+RCurl - 常规的网络客户端接口 (HTTP/FTP/...) . 官网：​CRAN - Package RCurl
+httr - 使用更加友好的RCurl封装. 官网：​hadley/httr
+httpuv - HTTP和WebSocket服务程序. 官网：​rstudio/httpuv
+XML - R中生成和解析XML的工具. 官网：​CRAN - Package XML
+rvest - 简单的web信息抓取,使用CSSSelect 和 XPath 语法. 官网：​hadley/rvest
+OpenCPU - HTTP API. 官网：​Producing and Reproducing Results
+Rfacebook - Facebook API. 官网：​pablobarbera/Rfacebook
+RSiteCatalyst - Adobe 分析服务的R语言客户端. 官网：​randyzwitch/RSiteCatalyst
+plumber - 一个将现有的R代码转换为API的包. 官网：​trestletech/plumber
+8.并行计算
+parallel - R语言高性能的并行计算平台. multicore and snow. 官网：​CRAN Task View: High-Performance and Parallel Computing with R
+Rmpi - Rmpi对MPI APIS提供了一个包装过的接口,它也提供一个交互式的R环境. 官网：​CRAN - Package Rmpi
+foreach - 使用并行来执行循环. 官网：​CRAN - Package foreach
+SparkR - R for Spark. 官网：​amplab-extras/SparkR-pkg
+DistributedR - 一个来自惠普Vertica Analytics团队的可伸缩的高性能平台. 官网：​vertica/DistributedR
+ddR - 提供分布式数据结构,简化了R中的分布式计算. 官网：​vertica/ddR
+sparklyr - 来自RStudio的Spark接口. 官网：​http://spark.rstudio.com/
+9.高性能
+Rcpp - Rcpp在R中提供了一个高效的API,使得函数更快执行. 官网：​Seamless R and C++ Integration
+Rcpp11 - Rcpp11完全重新设计,以C++11为目标. 官网：​Rcpp11/Rcpp11
+compiler - 使用JIT提高R代码的速度. 官网：​http://spark.rstudio.com/
+10.语言API
+rJava - R语言对JAVE接口. 官网：​CRAN - Package rJava
+jvmr - 集成了R, Java, and Scala. 官网：​cran/jvmr
+rJython - R语言对Python/Jython的接口. 官网：​CRAN - Package rJython
+rPython - 允许R调用Python. 官网：​CRAN - Package rPython
+runr - 在R中运行Julia和Bash. 官网：​yihui/runr
+RJulia - R中调用Julia. 官网：​armgong/rjulia
+RinRuby - 一个Ruby库,整合了R用Ruby解释器. 官网：​https://sites.google.com/a/ddahl.org/rinruby-users/
+R.matlab - 读写mat文件,将R和Matlab连接到一起. 官网：​CRAN - Package R.matlab
+RcppOctave -Octave and Matlab的接口. 官网：​renozao/RcppOctave
+RSPerl - 双向接口,R中调用Perl和在Perl中调用R. 官网：​http://www.omegahat.org/RSPerl/
+V8 - 嵌入JavaScript引擎. 官网：​jeroenooms/V8
+htmlwidgets - R中把JavaScript数据可视化的最好方法. 官网：​htmlwidgets for R
+rpy2 - Python对R的接口. 官网：​http://rpy.sourceforge.net/
+11.数据库管理
+RODBC - R中ODBC数据库范围. 官网：​CRAN - Package RODBC
+DBI - 在R和数据库管理系统之间定义一个公共的接口. 官网：​rstats-db/DBI
+elastic - Elasticsearch HTTP API的包装器. 官网：​ropensci/elastic
+mongolite - R中Mongo客户端. 官网：​jeroenooms/mongolite
+RMySQL - R语言的MySQL数据库接口. 官网：​CRAN - Package RMySQL
+ROracle - R中Oracle数据库的接口. 官网：​CRAN - Package ROracle
+RPostgreSQL - R语言的PostgreSQL数据库系统接口. 官网：​https://code.google.com/p/rpostgresql/
+RSQLite - R语言SQLite数据库接口. 官网：​CRAN - Package RSQLite
+RJDBC - 通过JDBC接口访问数据库. 官网：​http://cran.r-project.org/web/packages/RJDBC/
+rmongodb - R中MongoDB驱动. 官网：​dselivanov/rmongodb
+rredis - R中Redis驱动. 官网：​CRAN - Package rredis
+RCassandra -Apache Cassanda直接接口(不是JAVA)，提供了最多的基本功能. 官网：​CRAN - Package RCassandra
+RHive - 通过Apache Hive的R扩展促进分布式计算. 官网：​nexr/RHive
+RNeo4j - Neo4j图形数据库驱动. 官网：​nicolewhite/RNeo4j
+12.机器学习
+AnomalyDetection - 来自Twitter的AnomalyDetection R包. 官网：​twitter/AnomalyDetection
+ahaz - 半参数添加风险回归的正则化. 官网：​CRAN - Package ahaz
+arules - 挖掘关联规则和频繁项集. 官网：​CRAN - Package arules
+bigrf - 大随机森林:大型数据集的分类和回归森林. 官网：​CRAN - Package bigrf
+bigRR - 广义回归(特殊是在p >> n情况下). 官网：​CRAN - Package bigRR
+bmrm - 风险最小化方案的正规化方法. 官网：​CRAN - Package bmrm
+Boruta - 所有相关的特征选择算法的一个封装 . 官网：​CRAN - Package Boruta
+BreakoutDetection - Breakout Detection via Robust E-Statistics from Twitter.[暂时不明真相] 官网：​twitter/BreakoutDetection
+bst - 梯度增加. 官网：​CRAN - Package bst
+CausalImpact - 利用贝叶斯时间序列结构模型进行因果推断. 官网：​google/CausalImpact
+C50 - C5.0决策树和基于规则的模型. 官网：​CRAN - Package C50
+caret - 分类和回归训练. 官网：​CRAN - Package caret
+Clever Algorithms For Machine Learning
+CORElearn - 分类、回归、特征评价和排序. 官网：​CRAN - Package CORElearn
+CoxBoost - Cox models by likelihood based boosting for a single survival endpoint or competing risks. 官网：​CRAN - Package CoxBoost
+Cubist - 规则和基于实例的回归建模. 官网：​CRAN - Package Cubist
+e1071 - Misc统计函数 (e1071),主要功能有类别分析、傅里叶变换,模糊聚类,支持向量机,最短路径计算,朴素贝叶斯分类器等等. 官网：​CRAN - Package e1071
+earth - 多元自适应回归模型. 官网：CRAN - Package earth
+elasticnet - 稀疏估计和稀疏主成分分析. 官网：CRAN - Package elasticnet
+ElemStatLearn - 书籍"The Elements of Statistical Learning, Data Mining, Inference, and Prediction"中的数据集,函数和例子. 官网：CRAN - Package ElemStatLearn
+evtree - 全局最优树的进化学习. 官网：CRAN - Package evtree
+forecast - 使用ARIMA, ETS, STLM, TBATS,和神经网络进行时间序列预测. 官网：CRAN - Package forecast
+forecastHybrid - 使用"forecast"包对ARIMA, ETS, STLM, TBATS,和神经网络模型进行交叉检验. 官网：CRAN - Package forecastHybrid
+FSelector - 一个基于subset-search或特性排名方法的特征选择框架. 官网：​CRAN - Package FSelector
+frbs - 使用模糊规则系统处理分类和回归的任务. 官网：​CRAN - Package frbs
+GAMBoost -　　基于广义线性和加法模型. 官网：CRAN - Package GAMBoost
+gamboostLSS - GAMLSS方法的改善. 官网：CRAN - Package gamboostLSS
+gbm - 改善广义线性模型. 官网：CRAN - Package gbm
+glmnet - Lasso 和 elastic-net正规化广义线性模型. 官网：CRAN - Package glmnet
+glmpath - L1 Regularization Path for Generalized Linear Models and Cox Proportional Hazards Model. 官网：CRAN - Package glmpath
+GMMBoost - 广义混合模型. 官网：CRAN - Package GMMBoost
+grplasso - Fitting user specified models with Group Lasso penalty. 官网：CRAN - Package grplasso
+grpreg - Regularization paths for regression models with grouped covariates. 官网：CRAN - Package grpreg
+h2o - Deeplearning, Random forests, GBM, KMeans, PCA, GLM. 官网：CRAN - Package h2o
+hda - 异方差判别分析. 官网：​CRAN - Package hda
+ipred - 预测器改进. 官网：​CRAN - Package ipred
+kernlab - kernlab: 基于内核学习的机器实验室. 官网：​CRAN - Package kernlab
+klaR - 分类和可视化. 官网：​CRAN - Package klaR
+kohonen - 监督和非监督自组织映射. 官网：​CRAN - Package kohonen
+lars - Least Angle Regression, Lasso and Forward Stagewise. 官网：​CRAN - Package lars
+lasso2 - L1 constrained estimation aka ‘lasso’. 官网：​CRAN - Package lasso2
+LiblineaR - 基于C/C++库的线性预测模型. 官网：​CRAN - Package LiblineaR
+lme4 - Mixed-effects models. 官网：​lme4/lme4
+LogicReg - 逻辑回归模型. 官网：​CRAN - Package LogicReg
+maptree - 映射、修剪和图形树模型. 官网：​CRAN - Package maptree
+mboost - Model-Based Boosting. 官网：​CRAN - Package mboost
+Machine Learning For Hackers
+mvpart - Multivariate partitioning. 官网：​CRAN - Package mvpart
+MXNet - MXNet brings flexible and efficient GPU computing and state-of-art deep learning to R. 官网：​dmlc/mxnet
+ncvreg - Regularization paths for SCAD- and MCP-penalized regression models. 官网：​CRAN - Package ncvreg
+nnet - eed-forward Neural Networks and Multinomial Log-Linear Models. 官网：CRAN - Package nnet
+oblique.tree - Oblique Trees for Classification Data. 官网：CRAN - Package oblique.tree
+pamr - Pam: 小矩阵预测分析. 官网：CRAN - Package pamr
+party - A Laboratory for Recursive Partytioning. 官网：CRAN - Package party
+partykit - A Toolkit for Recursive Partytioning. 官网：CRAN - Package partykit
+penalized - L1 (lasso and fused lasso) and L2 (ridge) penalized estimation in GLMs and in the Cox model. 官网：CRAN - Package penalized
+penalizedLDA - Penalized classification using Fisher's linear discriminant. 官网：CRAN - Package penalizedLDA
+penalizedSVM - 使用惩罚函数的特征选择支持向量机. 官网：CRAN - Package penalizedSVM
+quantregForest - quantregForest: Quantile Regression Forests. 官网：CRAN - Package quantregForest
+randomForest - 随机森林: Breiman and Cutler's random forests for classification and regression. 官网：CRAN - Package randomForest
+randomForestSRC - randomForestSRC: Random Forests for Survival, Regression and Classification (RF-SRC). 官网：CRAN - Package randomForestSRC
+rattle - 图形界面式的数据挖掘工具. 官网：CRAN - Package rattle
+rda - Shrunken Centroids Regularized Discriminant Analysis. 官网：CRAN - Package rda
+rdetools - Relevant Dimension Estimation (RDE) in Feature Spaces. 官网：CRAN - Package rdetools
+REEMtree - Regression Trees with Random Effects for Longitudinal (Panel) Data. 官网：CRAN - Package REEMtree
+relaxo - Relaxed Lasso. 官网：CRAN - Package relaxo
+rgenoud - R version of GENetic Optimization Using Derivatives. 官网：​CRAN - Package rgenoud
+rgp - R基因编程框架. 官网：​CRAN - Package rgp
+Rmalschains - 使用本地文化基因算法进行连续问题优化.[这里翻译不准]. Search Chains (MA-LS-Chains) in R. 官网：​CRAN - Package Rmalschains
+rminer - 在分类和回归问题中简单的使用数据挖掘方法(如神经网络和支持向量机). 官网：​CRAN - Package rminer
+ROCR - 可视化评分分类器的性能. 官网：​CRAN - Package ROCR
+RoughSets - 使用粗糙集和模糊粗糙集理论进行数据分析. 官网：​CRAN - Package RoughSets
+rpart - Recursive Partitioning and Regression Trees. 官网：​CRAN - Package rpart
+RPMM - Recursively Partitioned Mixture Model. 官网：​CRAN - Package RPMM
+RSNNS - Neural Networks in R using the Stuttgart Neural Network Simulator (SNNS). 官网：​CRAN - Package RSNNS
+Rsomoclu - Parallel implementation of self-organizing maps. 官网：​CRAN - Package Rsomoclu
+RWeka - Weka的R接口(Weka是基于JAVA环境下开源的机器学习以及数据挖掘软件). 官网：​CRAN - Package RWeka
+RXshrink - RXshrink: Maximum Likelihood Shrinkage via Generalized Ridge or Least Angle Regression. 官网：​CRAN - Package RXshrink
+sda - Shrinkage Discriminant Analysis and CAT Score Variable Selection. 官网：​CRAN - Package sda
+SDDA - Stepwise Diagonal Discriminant Analysis. 官网：​CRAN - Package SDDA
+SuperLearner and subsemble - Multi-algorithm ensemble learning packages. 官网：​ecpolley/SuperLearner
+svmpath - svmpath: the SVM Path algorithm. 官网：​CRAN - Package svmpath
+tgp - Bayesian treed Gaussian process models. 官网：​CRAN - Package tgp
+tree - 分类和回归树. 官网：CRAN - Package tree
+varSelRF - 使用随机森林进行变量选择. 官网：​CRAN - Package varSelRF
+xgboost - eXtreme Gradient Boosting Tree model, well known for its speed and performance. 官网：​tqchen/xgboost
+13.自然语言处理
+text2vec - 一个快速文本挖掘框架。 Fast Text Mining Framework for Vectorization and Word Embeddings. 官网：​dselivanov/text2vec
+tm - 一个全面的文本挖掘框架. 官网：​CRAN - Package tm
+openNLP - Apache OpenNLP工具接口. 官网：​CRAN - Package openNLP
+koRpus - 一个文本分析的R包. 官网：​CRAN - Package koRpus
+zipfR - 词频分布统计模型. 官网：​CRAN - Package zipfR
+NLP - 基本自然语言处理功能. 官网：CRAN - Package NLP
+LDAvis - 主题模型的交互式可视化. 官网：​cpsievert/LDAvis
+topicmodels - Topic modeling interface to the C code developed by by David M. Blei for Topic Modeling (Latent Dirichlet Allocation (LDA), and Correlated Topics Models (CTM)). 官网：​CRAN - Package topicmodels
+syuzhet - Extracts sentiment from text using three different sentiment dictionaries. 官网：​CRAN - Package syuzhet
+SnowballC - Snowball stemmers based on the C libstemmer UTF-8 library. 官网：​CRAN - Package SnowballC
+quanteda - 文本数据的定量分析. 官网：​kbenoit/quanteda
+Topic Models Resources - 主题模型的学习和R相关资源. 官网：​trinker/topicmodels_learning
+NLP for - NLP related resources in R. @Chinese. 官网：​BZRLC/R-notes
+14.贝叶斯
+coda - 输出MCMC(马尔可夫链蒙特卡尔理论)的分析和诊断信息. 官网：​CRAN - Package coda
+mcmc - 马尔可夫链蒙特卡尔理论(MCMC). 官网：​CRAN - Package mcmc
+MCMCpack - 马尔可夫链蒙特卡尔理论 (MCMC). 官网：​MCMCpack
+R2WinBUGS - 在在R/S-PLUS中打开WinBUGS 和 OpenBUGS. 官网：​CRAN - Package R2WinBUGS
+BRugs - OpenBUGS MCMC 软件的R接口. 官网：​CRAN - Package BRugs
+rjags - JAGS MCMC组件的R接口. 官网：​CRAN - Package rjags
+rstan - Stan MCMC软件的R接口. 官网：​RStan
+15.最优化
+minqa - Derivative-free optimization algorithms by quadratic approximation. 官网：​CRAN - Package minqa
+nloptr - 一个免费开源的非线性最优化程序包. 官网：​CRAN - Package nloptr
+lpSolve - Lp_solve解决线性和整形问题的R接口. 官网：​CRAN - Package lpSolve
+16.金融
+quantmod - 定量金融模型和交易框架. 官网：​Quantitative Financial Modelling Framework
+TTR - 技术交易规相关的数据和功能函数. 官网：​CRAN - Package TTR
+PerformanceAnalytics - 计量经济学性能和风险分析工具. 官网：​CRAN - Package PerformanceAnalytics
+zoo - S3 Infrastructure for Regular and Irregular Time Series. 官网：​CRAN - Package zoo
+xts - 可扩展的时间序列. 官网：​CRAN - Package xts
+tseries - 金融时间序列分析和计算. 官网：​CRAN - Package tseries
+fAssets - 金融资产分析和建模. 官网：​CRAN - Package fAssets
+17.生物信息学
+Bioconductor - 用于分析和理解高通量基因组数据的工具. 官网：Bioconductor - Home
+genetics - 处理基因数据的R包. 官网：​CRAN - Package genetics
+gap - 一个人口家庭遗传数据分析的综合工具. 官网：​CRAN - Package gap
+ape - 分子系统学和进化分析. 官网：​CRAN - Package ape
+pheatmap - 一个使用简单的热图工具. 官网：CRAN - Package pheatmap
+ddpcr - Analysis and visualization of Droplet Digital PCR data. 官网：​daattali/ddpcr
+18.网络分析
+Network Analysis List - 网络分析相关资源. 官网：​briatte/awesome-network-analysis
+igraph - 一个网络分析工具集合. 官网：igraph R package
+network - 一个操作数据关系的基本工具. 官网：CRAN - Package network
+sna - 基本的网络测量和可视化工具. 官网：CRAN - Package sna
+netdiffuseR - 网络扩散的分析工具. 官网：USCCANA/netdiffuseR
+networkDynamic - 支持动态和时序网络. 官网：CRAN - Package networkDynamic
+ndtv - 构建动画的可视化动态网络工具,支持多种数据格式. 官网：​CRAN - Package ndtv
+statnet - 大量网络数据的分析,仿真和可视化工具. 官网：​Statnet
+ergm - 指数随机图模型. 官网：​CRAN - Package ergm
+latentnet - Latent position and cluster models for network objects. 官网：​CRAN - Package latentnet
+tnet - Network measures for weighted, two-mode and longitudinal networks. 官网：​CRAN - Package tnet
+rgexf - 从R导出网络对象到GEXF, for manipulation with network software like Gephi or Sigma. 官网：​gvegayon / rgexf / wiki / Home
+visNetwork - 使用vis.js类库进行网络可视化. 官网：​datastorm-open/visNetwork
+19.R 开发
+Package Development List - 提高整体开发能力的包. 官网：​ropensci/PackageDevelopment
+devtools - 然R开发人员的生活变得更简单的工具. 官网：​hadley/devtools
+testthat - 一个R包测试工具. 官网：​hadley/testthat
+R6 - simpler, faster, lighter-weight alternative to R's built-in classes. 官网：​wch/R6
+pryr - Make it easier to understand what's going on in R. 官网：​hadley/pryr
+roxygen - 在函数定义中描述说明. 官网：​klutometis/roxygen
+lineprof - R中在线分析结果可视化. 官网：​hadley/lineprof
+packrat - 让R项目更加简单,便携和可重构的工具. 官网：​rstudio/packrat
+installr - R中按照软件的相关函数(Windows平台). 官网：​talgalili/installr
+import - R的导入机制. 官网：​smbache/import
+modules - 另外一个R模块系统(Python风格). 官网：​klmr/modules
+Rocker - R configurations for Docker. 官网：rocker-org
+RStudio Addins - RStudio插件列表. 官网：​daattali/addinslist
+drat - Creation and use of R repositories on 使用R在GitHub或其他平台创建和使用仓储. 官网：eddelbuettel/drat
+covr - Test coverage for your R package and (optionally) upload the results to coveralls or codecov. 官网：jimhester/covr
+lintr - R静态代码分析. 官网：jimhester/lintr
+staticdocs - 为一个R包生成静态html文档. 官网：hadley/pkgdown
+20.日志
+futile.logger - R中类似log4j的日志记录包. 官网：zatonovo/futile.logger
+log4r - R中的log4j接口. 官网：johnmyleswhite/log4r
+logging - 一个在R中实现log4j的日志处理包. 官网：CRAN - Package logging
+21.数据包
+engsoccerdata - 英国和欧洲联赛结果数据(1871-2016年). 官网：jalapic/engsoccerdata
+gapminder - 从Gapminder摘录的数据集. 官网：jennybc/gapminder
+22.其他工具
+git2r - 在R中使用git. 官网：ropensci/git2r
+23.其他编译器
+CXXR - Refactorising R into C++. 官网：CXXR: Refactorising R into C++
+fastR - FastR is an implementation of the R Language in Java atop Truffle and Graal. 官网：allr / FastR / wiki / Home
+incanter - Clojure-based, R-like statistical computing and graphics environment for the JVM with Lisp spirit. 官网：incanter/incanter
+pqR - 一个更快的R实现. 官网：pqR - a pretty quick version of R
+renjin - 一个基于JVM的R编译器. 官网：Renjin.org | The JVM-based interpreter for the R language for statistical computing
+rho - Refactor the interpreter of the R language into a fully-compatible, efficient, VM for R. 官网：rho-devel/rho
+riposte - 一个R快速编译和JIT工具. 官网：jtalbot/riposte
+RRO - R革命性开放平台(Microsoft R Open). 官网：Microsoft R Open: The Enhanced R Distribution
+TERR - R的TIBCO企业运行环境. 官网：TIBCO Spotfire - TIBCO Enterprise Runtime for R (TERR)
+24.R学习
+swirl - 一个在R控制台中交互式学习指南. 官网：swirl: Learn R, in R.
+DataScienceR - 一个数据科学,神经网络,和机器学习的指南. 官网：ujjwalkarn/DataScienceR
+25.资源
+25.1 网站
+R-project - R 项目的官方网站. 官网：The R Project for Statistical Computing
+R Bloggers - R语言的一个综合性博客网站. 官网：R-bloggers
+DataCamp - 在线学习R数据分析. 官网：Learn R, Python & Data Science Online | DataCamp
+Quick-R - 一个非常好的快速参考手册. 官网：Quick-R: Home Page
+Advanced R - 书籍高级R编程的在线版. 官网：Welcome · Advanced R.
+Efficient R Programming - 书籍"Efficient R Programming"的在线主页. 官网：Efficient R programming
+CRAN Task Views - CRAN包的任务列表. 官网：CRAN Task Views
+The R Programming Wikibook - 一个R协作手册 官网：Wikibooks, open books for an open world
+R-users - R语言的求职板块. 官网：Jobs for R-users
+R Cookbook - 一个R问答网站,由[R Graphics Cookbook]进行支持(http://shop.oreilly.com/product/0636920023135.do). 官网：Cookbook for R
+tryR - 快速开始使用R. 官网：Try R
+RDocumentation - 使用RDocumentation搜索所有的CRAN, Bioconductor, Github包和文档. 官网：RDocumentation
+25.2 书籍
+R Books List - R相关书籍清单. 官网：RomanTsegelskyi/rbooks
+The Art of R Programming - 一个很好的资源,可以系统地学习基础类型的对象,控制语句,变量的范围,以及调试等. 官网：The Art of R Programming
+Free Books - CRAN贡献的多种语言文档. Contributed Documentation in many languages. 官网：Contributed Documentation
+R Cookbook - 快速简单的介绍R及相关常见的统计任务. 官网：R Cookbook
+Johns Hopkins编写的数据科学专业的一部分教程:
+Exploratory Data Analysis with R - 基本的各种数据分析技能. * R Programming for Data Science - 依赖于R的一些高级数据分析. * Report Writing for Data Science in R - R语言的报表生成和可重用组件研究. 官网：Exploratory Data Analysis… by Roger D. Peng [PDF/iPad/Kindle]
+R Packages - 一个用R包编写的书籍 (有论文和网站2钟格式). 官网：Welcome · R packages
+R in Action - 一本旨在帮助所有级别R用户的书籍. 官网：R in Action, Second Edition
+Use R! - This series of inexpensive and focused books from Springer publish shorter books aimed at practitioners. Books can discuss the use of R in a particular subject area, such as Bayesian networks, ggplot2 and Rcpp. 官网：Use R! (Titles in this series)
+R for SAS and SPSS users - 一个对已经熟悉SAS和SPASS用户的资源库. 官网：Free Version
+An Introduction to R - 一个很好的介绍R的文章,也涵盖了一些高级主题. 官网：https://cran.r-project.org/doc/manuals/R-intro.pdf
+Introduction to Statistical Learning with Application in R - A simplified and "operational" version of The Elements of Statistical Learning. Free softcopy provided by its authors. 官网：Introduction to Statistical Learning
+The R Inferno - Patrick Burns gives insight into R's ins and outs along with its quirks! 官网：http://www.burns-stat.com/pages/Tutor/R_inferno.pdf
+R for Data Science - Free book from RStudio developers with emphasis on data science workflow. 官网：R for Data Science
+25.3 博客
+Not So Standard Deviations - 数据科学博客
+@Roger Peng and @Hilary Parker.
+R World News - R行业的社区新闻,可以让你与时俱进.
+@Bob Rudis and @Jay Jacobs.
+The R-Podcast - 使用R的一些实践建议.
+@Eric Nantz.
+R Talk - 关于R语言和统计软件的新闻和讨论.
+@Oliver Keyes, @Jasmine Dumas, @Ted Hart and @Mikhail Popov.
+25.4 参考文献
+R Reference Card 2.0 - Material from R for Beginners by permission of Emmanuel Paradis (Version 2 by Matt Baggott). 官网：http://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf
+Regression Analysis Refcard - R Reference Card for Regression Analysis. 官网：http://cran.r-project.org/doc/contrib/Ricci-refcard-regression.pdf
+Reference Card for ESS - Reference Card for ESS. 官网：http://ess.r-project.org/refcard.pdf
+R Markdown Cheat sheet - Quick reference guide for writing reports with R Markdown. 官网：http://shiny.rstudio.com/images/rm-cheatsheet.pdf.zip
+Shiny Cheat sheet - Quick reference guide for building Shiny apps. 官网：http://shiny.rstudio.com/images/cheatsheet.pdf.zip
+ggplot2 Cheat sheet - Quick reference guide for data visualisation with ggplot2. 官网：https://www.rstudio.com/wp-content/uploads/2015/08/ggplot2-cheatsheet.pdf
+devtools Cheat sheet - Quick reference guide to package development in R. 官网：https://www.rstudio.com/wp-content/uploads/2015/06/devtools-cheatsheet.pdf
+25.5 网络课程
+The Analytics Edge - Hands-on introduction to data analysis with R from MITx. 官网：The Analytics Edge
+Johns Hopkins University Data Science Specialization - 9 courses including: Introduction to R, literate analysis tools, Shiny and some more. 官网：Specialization | Coursera
+HarvardX Biomedical Data Science - Introduction to R for the Life Sciences. 官网：HarvardX Biomedical Data Science Open Online Training Curriculum launches on January 19
+Explore Statistics with R - Covers introduction, data handling and statistical analysis in R. 官网：Explore Statistics with R
+25.6 列表
+Books - R书籍清单. 官网：RomanTsegelskyi/rbooks
+DataScienceR - R数据科学、神经网络和机器学习的指南清单. 官网：ujjwalkarn/DataScienceR
+ggplot2 Extensions - ggplot2扩展案例. 官网：ggplot2 extensions
+Natural Language Processing - R. @Chinese中NLP 相关资源. 官网：BZRLC/R-notes
+Network Analysis - 网络分析相关资源. 官网：briatte/awesome-network-analysis
+Open Data - 使用R获取,转换,操作,创建和贡献数据. 官网：ropensci/opendata
+Posts - 创建R博客或者文章. 官网：qinwf/awesome-R
+Package Development - 提高包开发的资源工具. 官网：ropensci/PackageDevelopment
+R Project Conferences - 使用R的相关信息,DSC会议. 官网：R: Conferences
+RStartHere - 一些非常有用的R包指南. 官网：rstudio/RStartHere
+RStudio Addins - RStudio插件清单. 官网：daattali/addinslist
+Topic Models - 主题模型的学习和R相关资源. 官网：trinker/topicmodels_learning
+Web Technologies - 如何使用R和万维网的信息. 官网：ropensci/webservices
+
+大家也可以加小编微信：tswenqu，进R语言中文社区 交流群。
+作者：李晓文
+链接：https://zhuanlan.zhihu.com/p/24747376
+来源：知乎
+著作权归作者所有，转载请联系作者获得授权。
+
+0.前言
+　　虽然很早就知道R被微软收购，也很早知道R在统计分析处理方面很强大，开始一直没有行动过。。。直到
+
+　　直到12月初在微软技术大会，看到我软的工程师演示R的使用，我就震惊了，然后最近在网上到处了解和爬一些R的资料，看着看着就入迷了，这就是个大宝库了，以前怎么没发现，看来还是太狭隘了。直到前几天我看到这个Awesome R文档，我就静不下来了，对比了目前自己的工作和以后的方向，非常适合我。所以毫不犹豫的把这个文档汉化了，所以大家一起享受吧。
+
+说明：本文已经提交到github，地址：asxinyu/awesome-R ，由于个人知识和能力限制，部分组件特别是机器学习方面比较专业的术语无法翻译，如果有懂的朋友可以留言或者在github直接修改。一起完善。
+
+这里有很多非常不错的R包和工具. 该想法来自于awesome-machine-learning.
+
+这里是包的导航清单，看起来更方便 Awesome R - Find Great R Packages
+
+　　通过这些翻译了解这些工具包，以后干活也就方便多了。不过翻译这个东西的确要靠耐心，翻译，编辑花费了至少一周的空余时间。　　
+
+　　在编辑本文的过程中，惊喜的发现原来 伯乐在线 也在翻译Awesome系列的其他资源：地址在github：
+
+1.jobbole/awesome-dotnet-cn
+
+2.jobbole/awesome-java-cnJava资源大全中文版（Awesome最新版） - 张果 - 博客园
+
+3.https://github.com/jobbole/awesome-javascript-cn
+
+JavaScript资源大全中文版（Awesome最新版） - 张果 - 博客园
+
+1.集成开发环境
+RStudio - 一个非常强大高效的图形界面开发环境，可以在Windows, Mac, 和Linux运行. 官网：Home
+Emacs + ESS - ESS是一个emacs文本编辑器的一个统计分析的插件. 官网：Emacs Speaks Statistics
+Sublime Text + R-Box - 一个在Sublime 2/3中使用R语言编程的插件. 官网：randy3k/R-Box
+TextMate + r.tmblundle - TextMate 1/2的插件. 官网：textmate/r.tmbundle
+StatET - 一个基于Eclipse的R语言IDE. 官网：WalWare - Homepage
+Revolution R Enterprise - 专注于大数据,大规模多处理器的功能,可以对学术用户免费提供和商业使用. 官网：R Server Overview-R Data Analysis
+R Commander - 一个包括基本图形用户界面的R包. 官网：R Commander
+IRkernel - Jupyter的R语言内核. 官网：IRkernel/IRkernel
+Deducer - 一个菜单驱动的数据分析的GUI工具,类似电子表格数据编辑器. 官网：Deducer: A GUI for R
+Radiant - 一个使用R语言，独立的基于浏览器接口的业务分析平台,基于Shiny. 官网：Radiant - Business analytics using R and Shiny
+Vim-R - Vim中R语言插件. 官网：vim-scripts/Vim-R-plugin
+Nvim-R - Neovim中R语言插件. 官网：jalvesaq/Nvim-R
+JASP - 一个完整的贝叶斯和概念论相关方法的R包,和使用SPSS非常相似。 官网：A Fresh Way to Do Statistics
+Bio7 - 一个包括创建,科学图像分析和统计分析的IDE. 官网：http://www.bio7.org/
+RTVS - Visual Studio中R开发工具. 官网：Welcome to R Tools for Visual Studio Preview!
+2.语法
+magrittr - 一个R语言高效的管道操作包. 官网：tidyverse/magrittr
+pipeR - 多泛型管道的实现. 官网：renkun-ken/pipeR
+lambda.r - R语言中函数式编程和简单的模式匹配. 官网：zatonovo/lambda.r
+purrr - 一个高级函数编程语言包. 官网：hadley/purrr
+3.数据操作
+dplyr - 快速数据操作和数据库查询. 官网：hadley/dplyr
+data.table - 使用短小灵活的语法操作数据. 官网：Rdatatable/data.table
+reshape2 - 灵活的数据排列,聚合处理. 官网：hadley/reshape
+readr - 一个快速简单的读取表格数据到R中的包. 官网：​tidyverse/readr
+haven - 对导入SPSS,STATA和SAS的文件进行改进. 官网：tidyverse/haven
+tidyr - 方便对数据进行整理、传播和收集. 官网：tidyverse/tidyr
+broom - 将统计分析对象转换成整齐的数据框(一种数据组织和呈现的方式). 官网：tidyverse/broom
+rlist - 一个操作非规范化数据的工具箱. 官网：renkun-ken/rlist
+jsonlite - 一个快速解析JSON文件的包. 官网：jeroenooms/jsonlite
+ff - 设计用来存储大型数据集的数据结构. 官网：ff
+lubridate - 一组日期和时间函数. 官网：CRAN - Package lubridate
+stringi - 基于ICU的字符串处理方案. 官网：stringi: THE string processing package for R
+stringr - 基于stringi之上的对字符串处理API. 官网：tidyverse/stringr
+bigmemory - 提供共享内存和内存映射矩阵,同时也包提供额外的工具,包括线性模型.(biglm) 和随机森林 (bigrf). 官网：CRAN - Package bigmemory
+fuzzyjoin - 使用不精确匹配的方式连接表数据. 官网：dgrtwo/fuzzyjoin
+tidyverse - 简单从tidyverse下载和安装包. 官网：​tidyverse/tidyverse
+4.图形显示
+ggplot2 - 强大的绘图统计和计算图形系统的实现.强烈推荐. 官网：​tidyverse/ggplot2
+ggfortify -一个ggplot2(流行的统计软件包)统一的接口(使用一行代码即可). 官网：​sinhrks/ggfortify
+ggrepel - 排除重叠的文本标签. 官网：​slowkow/ggrepel
+ggalt - ggplot2额外的坐标系统,几何和统计. 官网：​hrbrmstr/ggalt
+ggtree - 可视化和注释的系统树. 官网：​GuangchuangYu/ggtree
+ggplot2 Extensions - ggplot2扩展显示例子. 官网：​ggplot2 extensions
+lattice - 一个强大优雅的高级数据可视化系统. 官网：​trellis graphics for R
+corrplot - 图形显示相关矩阵或一般矩阵。它还包含一些矩阵重新排序算法. 官网：​taiyun/corrplot
+rgl - R中3D可视化系统. 官网：​CRAN - Package rgl
+Cairo - 一个使用cairo组件创建高质量显示输出的R图形包. 官网：​CRAN - Package Cairo
+extrafont - 在R中图像中使用字体的工具. 官网：​wch/extrafont
+showtext - 让R图形设备显示文本的时候使用系统字体. 官网：​yixuan/showtext
+animation - 一个使用 ImageMagick在R中产生动画图形的工具. 官网：​animation by yihui
+gganimate - 用ggplot2创建简单的动画. 官网：​dgrtwo/gganimate
+misc3d - 强大的3D绘图工具. 官网：​CRAN - Package misc3d
+xkcd - 在图表中使用xkcd风格. 官网：​CRAN - Package xkcd
+imager - 一个基于CImg库的图像处理包. 官网：http://dahtah.github.io/imager/
+5.HTML部件
+d3heatmap - 使用D3绘制互动的热图. 官网：rstudio/d3heatmap
+DataTables - 将R矩阵或数据框作为交互的HTML表. 官网：DT: An R interface to the DataTables library
+DiagrammeR - 在R中创建JS图表和流程图. 官网：​rich-iannone/DiagrammeR
+dygraphs - 在R中绘制时间序列数据图形. 官网：​rstudio/dygraphs
+formattable - 可格式化的数据结构. 官网：​formattable by renkun-ken
+ggvis - R中交互式的图形处理语法. 官网：​rstudio/ggvis
+Leaflet - 一个非常流行的交互式地图JavaScript组件. 官网：​Leaflet for R - Introduction
+MetricsGraphics - 可以轻松创建D3散点图、折线图和直方图. 官网：​http://hrbrmstr.github.io/metricsgraphics/
+networkD3 - D3 JavaScriptR网络图. 官网：​http://christophergandrud.github.io/networkD3/
+scatterD3 - D3 互动散点图. 官网：​juba/scatterD3
+plotly - 使用plot.ly进行交互式ggplot2和Shiny绘图. 官网：​ropensci/plotly
+rCharts - 交互式JS绘图. 官网：​ramnathv/rCharts
+rbokeh - Bokeh的R接口. 官网：​rbokeh
+threejs - 交互式3D散点图和地球仪. 官网：​bwlewis/rthreejs
+timevis - 创建完全交互式的时间轴可视化图形. 官网：​daattali/timevis
+visNetwork - 使用vis.js类库进行网络可视化. 官网：​datastorm-open/visNetwork
+6.复用组件研究
+knitr - R中简单的动态报表生成工具. 官网：​knitr: Elegant, flexible and fast dynamic report generation with R
+xtable - 将表格导出到LaTeX或者HTML. 官网：​CRAN - Package xtable
+rapport - 一个R模版系统. 官网：​rapport: an R templating system
+rmarkdown - R动态文档工具. 官网：R Markdown
+slidify - 创建和发布漂亮的html5展示效果. 官网：​ramnathv/slidify
+Sweave - 使用R创建LaTeX报表的R包. 官网：​LMU - Prof. Friedrich Leisch
+texreg - 在LaTex和HTML中格式化统计模型. 官网：​texreg: Conversion of Statistical Model Output in R to LaTeX and HTML Tables
+checkpoint - 从检查点快照服务器安装包. 官网：​RevolutionAnalytics/checkpoint
+brew - 报告模板的生成框架.可以和knitr合并. 官网：​CRAN - Package brew
+ReporteRs - 一个生成微软Word, PowerPoint和HTML报表的R包. 官网：​Microsoft Word and PowerPoint Documents Generation • ReporteRs package
+bookdown - 使用R Markdown编写书籍. 官网：​bookdown: Easy Book Publishing with R Markdown
+ezknitr - 避免使用'knitr'带来的工作目录的痛苦. 官网：​ropensci/ezknitr
+7.Web技术和服务
+Web Technologies List - 关于如何使用R和网络的相关信息. 官网：​ropensci/webservices
+shiny - 使用R创建简单的Web交互应用. 官网：​rstudio/shiny
+RCurl - 常规的网络客户端接口 (HTTP/FTP/...) . 官网：​CRAN - Package RCurl
+httr - 使用更加友好的RCurl封装. 官网：​hadley/httr
+httpuv - HTTP和WebSocket服务程序. 官网：​rstudio/httpuv
+XML - R中生成和解析XML的工具. 官网：​CRAN - Package XML
+rvest - 简单的web信息抓取,使用CSSSelect 和 XPath 语法. 官网：​hadley/rvest
+OpenCPU - HTTP API. 官网：​Producing and Reproducing Results
+Rfacebook - Facebook API. 官网：​pablobarbera/Rfacebook
+RSiteCatalyst - Adobe 分析服务的R语言客户端. 官网：​randyzwitch/RSiteCatalyst
+plumber - 一个将现有的R代码转换为API的包. 官网：​trestletech/plumber
+8.并行计算
+parallel - R语言高性能的并行计算平台. multicore and snow. 官网：​CRAN Task View: High-Performance and Parallel Computing with R
+Rmpi - Rmpi对MPI APIS提供了一个包装过的接口,它也提供一个交互式的R环境. 官网：​CRAN - Package Rmpi
+foreach - 使用并行来执行循环. 官网：​CRAN - Package foreach
+SparkR - R for Spark. 官网：​amplab-extras/SparkR-pkg
+DistributedR - 一个来自惠普Vertica Analytics团队的可伸缩的高性能平台. 官网：​vertica/DistributedR
+ddR - 提供分布式数据结构,简化了R中的分布式计算. 官网：​vertica/ddR
+sparklyr - 来自RStudio的Spark接口. 官网：​http://spark.rstudio.com/
+9.高性能
+Rcpp - Rcpp在R中提供了一个高效的API,使得函数更快执行. 官网：​Seamless R and C++ Integration
+Rcpp11 - Rcpp11完全重新设计,以C++11为目标. 官网：​Rcpp11/Rcpp11
+compiler - 使用JIT提高R代码的速度. 官网：​http://spark.rstudio.com/
+10.语言API
+rJava - R语言对JAVE接口. 官网：​CRAN - Package rJava
+jvmr - 集成了R, Java, and Scala. 官网：​cran/jvmr
+rJython - R语言对Python/Jython的接口. 官网：​CRAN - Package rJython
+rPython - 允许R调用Python. 官网：​CRAN - Package rPython
+runr - 在R中运行Julia和Bash. 官网：​yihui/runr
+RJulia - R中调用Julia. 官网：​armgong/rjulia
+RinRuby - 一个Ruby库,整合了R用Ruby解释器. 官网：​https://sites.google.com/a/ddahl.org/rinruby-users/
+R.matlab - 读写mat文件,将R和Matlab连接到一起. 官网：​CRAN - Package R.matlab
+RcppOctave -Octave and Matlab的接口. 官网：​renozao/RcppOctave
+RSPerl - 双向接口,R中调用Perl和在Perl中调用R. 官网：​http://www.omegahat.org/RSPerl/
+V8 - 嵌入JavaScript引擎. 官网：​jeroenooms/V8
+htmlwidgets - R中把JavaScript数据可视化的最好方法. 官网：​htmlwidgets for R
+rpy2 - Python对R的接口. 官网：​http://rpy.sourceforge.net/
+11.数据库管理
+RODBC - R中ODBC数据库范围. 官网：​CRAN - Package RODBC
+DBI - 在R和数据库管理系统之间定义一个公共的接口. 官网：​rstats-db/DBI
+elastic - Elasticsearch HTTP API的包装器. 官网：​ropensci/elastic
+mongolite - R中Mongo客户端. 官网：​jeroenooms/mongolite
+RMySQL - R语言的MySQL数据库接口. 官网：​CRAN - Package RMySQL
+ROracle - R中Oracle数据库的接口. 官网：​CRAN - Package ROracle
+RPostgreSQL - R语言的PostgreSQL数据库系统接口. 官网：​https://code.google.com/p/rpostgresql/
+RSQLite - R语言SQLite数据库接口. 官网：​CRAN - Package RSQLite
+RJDBC - 通过JDBC接口访问数据库. 官网：​http://cran.r-project.org/web/packages/RJDBC/
+rmongodb - R中MongoDB驱动. 官网：​dselivanov/rmongodb
+rredis - R中Redis驱动. 官网：​CRAN - Package rredis
+RCassandra -Apache Cassanda直接接口(不是JAVA)，提供了最多的基本功能. 官网：​CRAN - Package RCassandra
+RHive - 通过Apache Hive的R扩展促进分布式计算. 官网：​nexr/RHive
+RNeo4j - Neo4j图形数据库驱动. 官网：​nicolewhite/RNeo4j
+12.机器学习
+AnomalyDetection - 来自Twitter的AnomalyDetection R包. 官网：​twitter/AnomalyDetection
+ahaz - 半参数添加风险回归的正则化. 官网：​CRAN - Package ahaz
+arules - 挖掘关联规则和频繁项集. 官网：​CRAN - Package arules
+bigrf - 大随机森林:大型数据集的分类和回归森林. 官网：​CRAN - Package bigrf
+bigRR - 广义回归(特殊是在p >> n情况下). 官网：​CRAN - Package bigRR
+bmrm - 风险最小化方案的正规化方法. 官网：​CRAN - Package bmrm
+Boruta - 所有相关的特征选择算法的一个封装 . 官网：​CRAN - Package Boruta
+BreakoutDetection - Breakout Detection via Robust E-Statistics from Twitter.[暂时不明真相] 官网：​twitter/BreakoutDetection
+bst - 梯度增加. 官网：​CRAN - Package bst
+CausalImpact - 利用贝叶斯时间序列结构模型进行因果推断. 官网：​google/CausalImpact
+C50 - C5.0决策树和基于规则的模型. 官网：​CRAN - Package C50
+caret - 分类和回归训练. 官网：​CRAN - Package caret
+Clever Algorithms For Machine Learning
+CORElearn - 分类、回归、特征评价和排序. 官网：​CRAN - Package CORElearn
+CoxBoost - Cox models by likelihood based boosting for a single survival endpoint or competing risks. 官网：​CRAN - Package CoxBoost
+Cubist - 规则和基于实例的回归建模. 官网：​CRAN - Package Cubist
+e1071 - Misc统计函数 (e1071),主要功能有类别分析、傅里叶变换,模糊聚类,支持向量机,最短路径计算,朴素贝叶斯分类器等等. 官网：​CRAN - Package e1071
+earth - 多元自适应回归模型. 官网：CRAN - Package earth
+elasticnet - 稀疏估计和稀疏主成分分析. 官网：CRAN - Package elasticnet
+ElemStatLearn - 书籍"The Elements of Statistical Learning, Data Mining, Inference, and Prediction"中的数据集,函数和例子. 官网：CRAN - Package ElemStatLearn
+evtree - 全局最优树的进化学习. 官网：CRAN - Package evtree
+forecast - 使用ARIMA, ETS, STLM, TBATS,和神经网络进行时间序列预测. 官网：CRAN - Package forecast
+forecastHybrid - 使用"forecast"包对ARIMA, ETS, STLM, TBATS,和神经网络模型进行交叉检验. 官网：CRAN - Package forecastHybrid
+FSelector - 一个基于subset-search或特性排名方法的特征选择框架. 官网：​CRAN - Package FSelector
+frbs - 使用模糊规则系统处理分类和回归的任务. 官网：​CRAN - Package frbs
+GAMBoost -　　基于广义线性和加法模型. 官网：CRAN - Package GAMBoost
+gamboostLSS - GAMLSS方法的改善. 官网：CRAN - Package gamboostLSS
+gbm - 改善广义线性模型. 官网：CRAN - Package gbm
+glmnet - Lasso 和 elastic-net正规化广义线性模型. 官网：CRAN - Package glmnet
+glmpath - L1 Regularization Path for Generalized Linear Models and Cox Proportional Hazards Model. 官网：CRAN - Package glmpath
+GMMBoost - 广义混合模型. 官网：CRAN - Package GMMBoost
+grplasso - Fitting user specified models with Group Lasso penalty. 官网：CRAN - Package grplasso
+grpreg - Regularization paths for regression models with grouped covariates. 官网：CRAN - Package grpreg
+h2o - Deeplearning, Random forests, GBM, KMeans, PCA, GLM. 官网：CRAN - Package h2o
+hda - 异方差判别分析. 官网：​CRAN - Package hda
+ipred - 预测器改进. 官网：​CRAN - Package ipred
+kernlab - kernlab: 基于内核学习的机器实验室. 官网：​CRAN - Package kernlab
+klaR - 分类和可视化. 官网：​CRAN - Package klaR
+kohonen - 监督和非监督自组织映射. 官网：​CRAN - Package kohonen
+lars - Least Angle Regression, Lasso and Forward Stagewise. 官网：​CRAN - Package lars
+lasso2 - L1 constrained estimation aka ‘lasso’. 官网：​CRAN - Package lasso2
+LiblineaR - 基于C/C++库的线性预测模型. 官网：​CRAN - Package LiblineaR
+lme4 - Mixed-effects models. 官网：​lme4/lme4
+LogicReg - 逻辑回归模型. 官网：​CRAN - Package LogicReg
+maptree - 映射、修剪和图形树模型. 官网：​CRAN - Package maptree
+mboost - Model-Based Boosting. 官网：​CRAN - Package mboost
+Machine Learning For Hackers
+mvpart - Multivariate partitioning. 官网：​CRAN - Package mvpart
+MXNet - MXNet brings flexible and efficient GPU computing and state-of-art deep learning to R. 官网：​dmlc/mxnet
+ncvreg - Regularization paths for SCAD- and MCP-penalized regression models. 官网：​CRAN - Package ncvreg
+nnet - eed-forward Neural Networks and Multinomial Log-Linear Models. 官网：CRAN - Package nnet
+oblique.tree - Oblique Trees for Classification Data. 官网：CRAN - Package oblique.tree
+pamr - Pam: 小矩阵预测分析. 官网：CRAN - Package pamr
+party - A Laboratory for Recursive Partytioning. 官网：CRAN - Package party
+partykit - A Toolkit for Recursive Partytioning. 官网：CRAN - Package partykit
+penalized - L1 (lasso and fused lasso) and L2 (ridge) penalized estimation in GLMs and in the Cox model. 官网：CRAN - Package penalized
+penalizedLDA - Penalized classification using Fisher's linear discriminant. 官网：CRAN - Package penalizedLDA
+penalizedSVM - 使用惩罚函数的特征选择支持向量机. 官网：CRAN - Package penalizedSVM
+quantregForest - quantregForest: Quantile Regression Forests. 官网：CRAN - Package quantregForest
+randomForest - 随机森林: Breiman and Cutler's random forests for classification and regression. 官网：CRAN - Package randomForest
+randomForestSRC - randomForestSRC: Random Forests for Survival, Regression and Classification (RF-SRC). 官网：CRAN - Package randomForestSRC
+rattle - 图形界面式的数据挖掘工具. 官网：CRAN - Package rattle
+rda - Shrunken Centroids Regularized Discriminant Analysis. 官网：CRAN - Package rda
+rdetools - Relevant Dimension Estimation (RDE) in Feature Spaces. 官网：CRAN - Package rdetools
+REEMtree - Regression Trees with Random Effects for Longitudinal (Panel) Data. 官网：CRAN - Package REEMtree
+relaxo - Relaxed Lasso. 官网：CRAN - Package relaxo
+rgenoud - R version of GENetic Optimization Using Derivatives. 官网：​CRAN - Package rgenoud
+rgp - R基因编程框架. 官网：​CRAN - Package rgp
+Rmalschains - 使用本地文化基因算法进行连续问题优化.[这里翻译不准]. Search Chains (MA-LS-Chains) in R. 官网：​CRAN - Package Rmalschains
+rminer - 在分类和回归问题中简单的使用数据挖掘方法(如神经网络和支持向量机). 官网：​CRAN - Package rminer
+ROCR - 可视化评分分类器的性能. 官网：​CRAN - Package ROCR
+RoughSets - 使用粗糙集和模糊粗糙集理论进行数据分析. 官网：​CRAN - Package RoughSets
+rpart - Recursive Partitioning and Regression Trees. 官网：​CRAN - Package rpart
+RPMM - Recursively Partitioned Mixture Model. 官网：​CRAN - Package RPMM
+RSNNS - Neural Networks in R using the Stuttgart Neural Network Simulator (SNNS). 官网：​CRAN - Package RSNNS
+Rsomoclu - Parallel implementation of self-organizing maps. 官网：​CRAN - Package Rsomoclu
+RWeka - Weka的R接口(Weka是基于JAVA环境下开源的机器学习以及数据挖掘软件). 官网：​CRAN - Package RWeka
+RXshrink - RXshrink: Maximum Likelihood Shrinkage via Generalized Ridge or Least Angle Regression. 官网：​CRAN - Package RXshrink
+sda - Shrinkage Discriminant Analysis and CAT Score Variable Selection. 官网：​CRAN - Package sda
+SDDA - Stepwise Diagonal Discriminant Analysis. 官网：​CRAN - Package SDDA
+SuperLearner and subsemble - Multi-algorithm ensemble learning packages. 官网：​ecpolley/SuperLearner
+svmpath - svmpath: the SVM Path algorithm. 官网：​CRAN - Package svmpath
+tgp - Bayesian treed Gaussian process models. 官网：​CRAN - Package tgp
+tree - 分类和回归树. 官网：CRAN - Package tree
+varSelRF - 使用随机森林进行变量选择. 官网：​CRAN - Package varSelRF
+xgboost - eXtreme Gradient Boosting Tree model, well known for its speed and performance. 官网：​tqchen/xgboost
+13.自然语言处理
+text2vec - 一个快速文本挖掘框架。 Fast Text Mining Framework for Vectorization and Word Embeddings. 官网：​dselivanov/text2vec
+tm - 一个全面的文本挖掘框架. 官网：​CRAN - Package tm
+openNLP - Apache OpenNLP工具接口. 官网：​CRAN - Package openNLP
+koRpus - 一个文本分析的R包. 官网：​CRAN - Package koRpus
+zipfR - 词频分布统计模型. 官网：​CRAN - Package zipfR
+NLP - 基本自然语言处理功能. 官网：CRAN - Package NLP
+LDAvis - 主题模型的交互式可视化. 官网：​cpsievert/LDAvis
+topicmodels - Topic modeling interface to the C code developed by by David M. Blei for Topic Modeling (Latent Dirichlet Allocation (LDA), and Correlated Topics Models (CTM)). 官网：​CRAN - Package topicmodels
+syuzhet - Extracts sentiment from text using three different sentiment dictionaries. 官网：​CRAN - Package syuzhet
+SnowballC - Snowball stemmers based on the C libstemmer UTF-8 library. 官网：​CRAN - Package SnowballC
+quanteda - 文本数据的定量分析. 官网：​kbenoit/quanteda
+Topic Models Resources - 主题模型的学习和R相关资源. 官网：​trinker/topicmodels_learning
+NLP for - NLP related resources in R. @Chinese. 官网：​BZRLC/R-notes
+14.贝叶斯
+coda - 输出MCMC(马尔可夫链蒙特卡尔理论)的分析和诊断信息. 官网：​CRAN - Package coda
+mcmc - 马尔可夫链蒙特卡尔理论(MCMC). 官网：​CRAN - Package mcmc
+MCMCpack - 马尔可夫链蒙特卡尔理论 (MCMC). 官网：​MCMCpack
+R2WinBUGS - 在在R/S-PLUS中打开WinBUGS 和 OpenBUGS. 官网：​CRAN - Package R2WinBUGS
+BRugs - OpenBUGS MCMC 软件的R接口. 官网：​CRAN - Package BRugs
+rjags - JAGS MCMC组件的R接口. 官网：​CRAN - Package rjags
+rstan - Stan MCMC软件的R接口. 官网：​RStan
+15.最优化
+minqa - Derivative-free optimization algorithms by quadratic approximation. 官网：​CRAN - Package minqa
+nloptr - 一个免费开源的非线性最优化程序包. 官网：​CRAN - Package nloptr
+lpSolve - Lp_solve解决线性和整形问题的R接口. 官网：​CRAN - Package lpSolve
+16.金融
+quantmod - 定量金融模型和交易框架. 官网：​Quantitative Financial Modelling Framework
+TTR - 技术交易规相关的数据和功能函数. 官网：​CRAN - Package TTR
+PerformanceAnalytics - 计量经济学性能和风险分析工具. 官网：​CRAN - Package PerformanceAnalytics
+zoo - S3 Infrastructure for Regular and Irregular Time Series. 官网：​CRAN - Package zoo
+xts - 可扩展的时间序列. 官网：​CRAN - Package xts
+tseries - 金融时间序列分析和计算. 官网：​CRAN - Package tseries
+fAssets - 金融资产分析和建模. 官网：​CRAN - Package fAssets
+17.生物信息学
+Bioconductor - 用于分析和理解高通量基因组数据的工具. 官网：Bioconductor - Home
+genetics - 处理基因数据的R包. 官网：​CRAN - Package genetics
+gap - 一个人口家庭遗传数据分析的综合工具. 官网：​CRAN - Package gap
+ape - 分子系统学和进化分析. 官网：​CRAN - Package ape
+pheatmap - 一个使用简单的热图工具. 官网：CRAN - Package pheatmap
+ddpcr - Analysis and visualization of Droplet Digital PCR data. 官网：​daattali/ddpcr
+18.网络分析
+Network Analysis List - 网络分析相关资源. 官网：​briatte/awesome-network-analysis
+igraph - 一个网络分析工具集合. 官网：igraph R package
+network - 一个操作数据关系的基本工具. 官网：CRAN - Package network
+sna - 基本的网络测量和可视化工具. 官网：CRAN - Package sna
+netdiffuseR - 网络扩散的分析工具. 官网：USCCANA/netdiffuseR
+networkDynamic - 支持动态和时序网络. 官网：CRAN - Package networkDynamic
+ndtv - 构建动画的可视化动态网络工具,支持多种数据格式. 官网：​CRAN - Package ndtv
+statnet - 大量网络数据的分析,仿真和可视化工具. 官网：​Statnet
+ergm - 指数随机图模型. 官网：​CRAN - Package ergm
+latentnet - Latent position and cluster models for network objects. 官网：​CRAN - Package latentnet
+tnet - Network measures for weighted, two-mode and longitudinal networks. 官网：​CRAN - Package tnet
+rgexf - 从R导出网络对象到GEXF, for manipulation with network software like Gephi or Sigma. 官网：​gvegayon / rgexf / wiki / Home
+visNetwork - 使用vis.js类库进行网络可视化. 官网：​datastorm-open/visNetwork
+19.R 开发
+Package Development List - 提高整体开发能力的包. 官网：​ropensci/PackageDevelopment
+devtools - 然R开发人员的生活变得更简单的工具. 官网：​hadley/devtools
+testthat - 一个R包测试工具. 官网：​hadley/testthat
+R6 - simpler, faster, lighter-weight alternative to R's built-in classes. 官网：​wch/R6
+pryr - Make it easier to understand what's going on in R. 官网：​hadley/pryr
+roxygen - 在函数定义中描述说明. 官网：​klutometis/roxygen
+lineprof - R中在线分析结果可视化. 官网：​hadley/lineprof
+packrat - 让R项目更加简单,便携和可重构的工具. 官网：​rstudio/packrat
+installr - R中按照软件的相关函数(Windows平台). 官网：​talgalili/installr
+import - R的导入机制. 官网：​smbache/import
+modules - 另外一个R模块系统(Python风格). 官网：​klmr/modules
+Rocker - R configurations for Docker. 官网：rocker-org
+RStudio Addins - RStudio插件列表. 官网：​daattali/addinslist
+drat - Creation and use of R repositories on 使用R在GitHub或其他平台创建和使用仓储. 官网：eddelbuettel/drat
+covr - Test coverage for your R package and (optionally) upload the results to coveralls or codecov. 官网：jimhester/covr
+lintr - R静态代码分析. 官网：jimhester/lintr
+staticdocs - 为一个R包生成静态html文档. 官网：hadley/pkgdown
+20.日志
+futile.logger - R中类似log4j的日志记录包. 官网：zatonovo/futile.logger
+log4r - R中的log4j接口. 官网：johnmyleswhite/log4r
+logging - 一个在R中实现log4j的日志处理包. 官网：CRAN - Package logging
+21.数据包
+engsoccerdata - 英国和欧洲联赛结果数据(1871-2016年). 官网：jalapic/engsoccerdata
+gapminder - 从Gapminder摘录的数据集. 官网：jennybc/gapminder
+22.其他工具
+git2r - 在R中使用git. 官网：ropensci/git2r
+23.其他编译器
+CXXR - Refactorising R into C++. 官网：CXXR: Refactorising R into C++
+fastR - FastR is an implementation of the R Language in Java atop Truffle and Graal. 官网：allr / FastR / wiki / Home
+incanter - Clojure-based, R-like statistical computing and graphics environment for the JVM with Lisp spirit. 官网：incanter/incanter
+pqR - 一个更快的R实现. 官网：pqR - a pretty quick version of R
+renjin - 一个基于JVM的R编译器. 官网：Renjin.org | The JVM-based interpreter for the R language for statistical computing
+rho - Refactor the interpreter of the R language into a fully-compatible, efficient, VM for R. 官网：rho-devel/rho
+riposte - 一个R快速编译和JIT工具. 官网：jtalbot/riposte
+RRO - R革命性开放平台(Microsoft R Open). 官网：Microsoft R Open: The Enhanced R Distribution
+TERR - R的TIBCO企业运行环境. 官网：TIBCO Spotfire - TIBCO Enterprise Runtime for R (TERR)
+24.R学习
+swirl - 一个在R控制台中交互式学习指南. 官网：swirl: Learn R, in R.
+DataScienceR - 一个数据科学,神经网络,和机器学习的指南. 官网：ujjwalkarn/DataScienceR
+25.资源
+25.1 网站
+R-project - R 项目的官方网站. 官网：The R Project for Statistical Computing
+R Bloggers - R语言的一个综合性博客网站. 官网：R-bloggers
+DataCamp - 在线学习R数据分析. 官网：Learn R, Python & Data Science Online | DataCamp
+Quick-R - 一个非常好的快速参考手册. 官网：Quick-R: Home Page
+Advanced R - 书籍高级R编程的在线版. 官网：Welcome · Advanced R.
+Efficient R Programming - 书籍"Efficient R Programming"的在线主页. 官网：Efficient R programming
+CRAN Task Views - CRAN包的任务列表. 官网：CRAN Task Views
+The R Programming Wikibook - 一个R协作手册 官网：Wikibooks, open books for an open world
+R-users - R语言的求职板块. 官网：Jobs for R-users
+R Cookbook - 一个R问答网站,由[R Graphics Cookbook]进行支持(http://shop.oreilly.com/product/0636920023135.do). 官网：Cookbook for R
+tryR - 快速开始使用R. 官网：Try R
+RDocumentation - 使用RDocumentation搜索所有的CRAN, Bioconductor, Github包和文档. 官网：RDocumentation
+25.2 书籍
+R Books List - R相关书籍清单. 官网：RomanTsegelskyi/rbooks
+The Art of R Programming - 一个很好的资源,可以系统地学习基础类型的对象,控制语句,变量的范围,以及调试等. 官网：The Art of R Programming
+Free Books - CRAN贡献的多种语言文档. Contributed Documentation in many languages. 官网：Contributed Documentation
+R Cookbook - 快速简单的介绍R及相关常见的统计任务. 官网：R Cookbook
+Johns Hopkins编写的数据科学专业的一部分教程:
+Exploratory Data Analysis with R - 基本的各种数据分析技能. * R Programming for Data Science - 依赖于R的一些高级数据分析. * Report Writing for Data Science in R - R语言的报表生成和可重用组件研究. 官网：Exploratory Data Analysis… by Roger D. Peng [PDF/iPad/Kindle]
+R Packages - 一个用R包编写的书籍 (有论文和网站2钟格式). 官网：Welcome · R packages
+R in Action - 一本旨在帮助所有级别R用户的书籍. 官网：R in Action, Second Edition
+Use R! - This series of inexpensive and focused books from Springer publish shorter books aimed at practitioners. Books can discuss the use of R in a particular subject area, such as Bayesian networks, ggplot2 and Rcpp. 官网：Use R! (Titles in this series)
+R for SAS and SPSS users - 一个对已经熟悉SAS和SPASS用户的资源库. 官网：Free Version
+An Introduction to R - 一个很好的介绍R的文章,也涵盖了一些高级主题. 官网：https://cran.r-project.org/doc/manuals/R-intro.pdf
+Introduction to Statistical Learning with Application in R - A simplified and "operational" version of The Elements of Statistical Learning. Free softcopy provided by its authors. 官网：Introduction to Statistical Learning
+The R Inferno - Patrick Burns gives insight into R's ins and outs along with its quirks! 官网：http://www.burns-stat.com/pages/Tutor/R_inferno.pdf
+R for Data Science - Free book from RStudio developers with emphasis on data science workflow. 官网：R for Data Science
+25.3 博客
+Not So Standard Deviations - 数据科学博客
+@Roger Peng and @Hilary Parker.
+R World News - R行业的社区新闻,可以让你与时俱进.
+@Bob Rudis and @Jay Jacobs.
+The R-Podcast - 使用R的一些实践建议.
+@Eric Nantz.
+R Talk - 关于R语言和统计软件的新闻和讨论.
+@Oliver Keyes, @Jasmine Dumas, @Ted Hart and @Mikhail Popov.
+25.4 参考文献
+R Reference Card 2.0 - Material from R for Beginners by permission of Emmanuel Paradis (Version 2 by Matt Baggott). 官网：http://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf
+Regression Analysis Refcard - R Reference Card for Regression Analysis. 官网：http://cran.r-project.org/doc/contrib/Ricci-refcard-regression.pdf
+Reference Card for ESS - Reference Card for ESS. 官网：http://ess.r-project.org/refcard.pdf
+R Markdown Cheat sheet - Quick reference guide for writing reports with R Markdown. 官网：http://shiny.rstudio.com/images/rm-cheatsheet.pdf.zip
+Shiny Cheat sheet - Quick reference guide for building Shiny apps. 官网：http://shiny.rstudio.com/images/cheatsheet.pdf.zip
+ggplot2 Cheat sheet - Quick reference guide for data visualisation with ggplot2. 官网：https://www.rstudio.com/wp-content/uploads/2015/08/ggplot2-cheatsheet.pdf
+devtools Cheat sheet - Quick reference guide to package development in R. 官网：https://www.rstudio.com/wp-content/uploads/2015/06/devtools-cheatsheet.pdf
+25.5 网络课程
+The Analytics Edge - Hands-on introduction to data analysis with R from MITx. 官网：The Analytics Edge
+Johns Hopkins University Data Science Specialization - 9 courses including: Introduction to R, literate analysis tools, Shiny and some more. 官网：Specialization | Coursera
+HarvardX Biomedical Data Science - Introduction to R for the Life Sciences. 官网：HarvardX Biomedical Data Science Open Online Training Curriculum launches on January 19
+Explore Statistics with R - Covers introduction, data handling and statistical analysis in R. 官网：Explore Statistics with R
+25.6 列表
+Books - R书籍清单. 官网：RomanTsegelskyi/rbooks
+DataScienceR - R数据科学、神经网络和机器学习的指南清单. 官网：ujjwalkarn/DataScienceR
+ggplot2 Extensions - ggplot2扩展案例. 官网：ggplot2 extensions
+Natural Language Processing - R. @Chinese中NLP 相关资源. 官网：BZRLC/R-notes
+Network Analysis - 网络分析相关资源. 官网：briatte/awesome-network-analysis
+Open Data - 使用R获取,转换,操作,创建和贡献数据. 官网：ropensci/opendata
+Posts - 创建R博客或者文章. 官网：qinwf/awesome-R
+Package Development - 提高包开发的资源工具. 官网：ropensci/PackageDevelopment
+R Project Conferences - 使用R的相关信息,DSC会议. 官网：R: Conferences
+RStartHere - 一些非常有用的R包指南. 官网：rstudio/RStartHere
+RStudio Addins - RStudio插件清单. 官网：daattali/addinslist
+Topic Models - 主题模型的学习和R相关资源. 官网：trinker/topicmodels_learning
+Web Technologies - 如何使用R和万维网的信息. 官网：ropensci/webservices
+
+大家也可以加小编微信：tswenqu，进R语言中文社区 交流群。
+作者：李晓文
+链接：https://zhuanlan.zhihu.com/p/24747376
+来源：知乎
+著作权归作者所有，转载请联系作者获得授权。
+
+0.前言
+　　虽然很早就知道R被微软收购，也很早知道R在统计分析处理方面很强大，开始一直没有行动过。。。直到
+
+　　直到12月初在微软技术大会，看到我软的工程师演示R的使用，我就震惊了，然后最近在网上到处了解和爬一些R的资料，看着看着就入迷了，这就是个大宝库了，以前怎么没发现，看来还是太狭隘了。直到前几天我看到这个Awesome R文档，我就静不下来了，对比了目前自己的工作和以后的方向，非常适合我。所以毫不犹豫的把这个文档汉化了，所以大家一起享受吧。
+
+说明：本文已经提交到github，地址：asxinyu/awesome-R ，由于个人知识和能力限制，部分组件特别是机器学习方面比较专业的术语无法翻译，如果有懂的朋友可以留言或者在github直接修改。一起完善。
+
+这里有很多非常不错的R包和工具. 该想法来自于awesome-machine-learning.
+
+这里是包的导航清单，看起来更方便 Awesome R - Find Great R Packages
+
+　　通过这些翻译了解这些工具包，以后干活也就方便多了。不过翻译这个东西的确要靠耐心，翻译，编辑花费了至少一周的空余时间。　　
+
+　　在编辑本文的过程中，惊喜的发现原来 伯乐在线 也在翻译Awesome系列的其他资源：地址在github：
+
+1.jobbole/awesome-dotnet-cn
+
+2.jobbole/awesome-java-cnJava资源大全中文版（Awesome最新版） - 张果 - 博客园
+
+3.https://github.com/jobbole/awesome-javascript-cn
+
+JavaScript资源大全中文版（Awesome最新版） - 张果 - 博客园
+
+1.集成开发环境
+RStudio - 一个非常强大高效的图形界面开发环境，可以在Windows, Mac, 和Linux运行. 官网：Home
+Emacs + ESS - ESS是一个emacs文本编辑器的一个统计分析的插件. 官网：Emacs Speaks Statistics
+Sublime Text + R-Box - 一个在Sublime 2/3中使用R语言编程的插件. 官网：randy3k/R-Box
+TextMate + r.tmblundle - TextMate 1/2的插件. 官网：textmate/r.tmbundle
+StatET - 一个基于Eclipse的R语言IDE. 官网：WalWare - Homepage
+Revolution R Enterprise - 专注于大数据,大规模多处理器的功能,可以对学术用户免费提供和商业使用. 官网：R Server Overview-R Data Analysis
+R Commander - 一个包括基本图形用户界面的R包. 官网：R Commander
+IRkernel - Jupyter的R语言内核. 官网：IRkernel/IRkernel
+Deducer - 一个菜单驱动的数据分析的GUI工具,类似电子表格数据编辑器. 官网：Deducer: A GUI for R
+Radiant - 一个使用R语言，独立的基于浏览器接口的业务分析平台,基于Shiny. 官网：Radiant - Business analytics using R and Shiny
+Vim-R - Vim中R语言插件. 官网：vim-scripts/Vim-R-plugin
+Nvim-R - Neovim中R语言插件. 官网：jalvesaq/Nvim-R
+JASP - 一个完整的贝叶斯和概念论相关方法的R包,和使用SPSS非常相似。 官网：A Fresh Way to Do Statistics
+Bio7 - 一个包括创建,科学图像分析和统计分析的IDE. 官网：http://www.bio7.org/
+RTVS - Visual Studio中R开发工具. 官网：Welcome to R Tools for Visual Studio Preview!
+2.语法
+magrittr - 一个R语言高效的管道操作包. 官网：tidyverse/magrittr
+pipeR - 多泛型管道的实现. 官网：renkun-ken/pipeR
+lambda.r - R语言中函数式编程和简单的模式匹配. 官网：zatonovo/lambda.r
+purrr - 一个高级函数编程语言包. 官网：hadley/purrr
+3.数据操作
+dplyr - 快速数据操作和数据库查询. 官网：hadley/dplyr
+data.table - 使用短小灵活的语法操作数据. 官网：Rdatatable/data.table
+reshape2 - 灵活的数据排列,聚合处理. 官网：hadley/reshape
+readr - 一个快速简单的读取表格数据到R中的包. 官网：​tidyverse/readr
+haven - 对导入SPSS,STATA和SAS的文件进行改进. 官网：tidyverse/haven
+tidyr - 方便对数据进行整理、传播和收集. 官网：tidyverse/tidyr
+broom - 将统计分析对象转换成整齐的数据框(一种数据组织和呈现的方式). 官网：tidyverse/broom
+rlist - 一个操作非规范化数据的工具箱. 官网：renkun-ken/rlist
+jsonlite - 一个快速解析JSON文件的包. 官网：jeroenooms/jsonlite
+ff - 设计用来存储大型数据集的数据结构. 官网：ff
+lubridate - 一组日期和时间函数. 官网：CRAN - Package lubridate
+stringi - 基于ICU的字符串处理方案. 官网：stringi: THE string processing package for R
+stringr - 基于stringi之上的对字符串处理API. 官网：tidyverse/stringr
+bigmemory - 提供共享内存和内存映射矩阵,同时也包提供额外的工具,包括线性模型.(biglm) 和随机森林 (bigrf). 官网：CRAN - Package bigmemory
+fuzzyjoin - 使用不精确匹配的方式连接表数据. 官网：dgrtwo/fuzzyjoin
+tidyverse - 简单从tidyverse下载和安装包. 官网：​tidyverse/tidyverse
+4.图形显示
+ggplot2 - 强大的绘图统计和计算图形系统的实现.强烈推荐. 官网：​tidyverse/ggplot2
+ggfortify -一个ggplot2(流行的统计软件包)统一的接口(使用一行代码即可). 官网：​sinhrks/ggfortify
+ggrepel - 排除重叠的文本标签. 官网：​slowkow/ggrepel
+ggalt - ggplot2额外的坐标系统,几何和统计. 官网：​hrbrmstr/ggalt
+ggtree - 可视化和注释的系统树. 官网：​GuangchuangYu/ggtree
+ggplot2 Extensions - ggplot2扩展显示例子. 官网：​ggplot2 extensions
+lattice - 一个强大优雅的高级数据可视化系统. 官网：​trellis graphics for R
+corrplot - 图形显示相关矩阵或一般矩阵。它还包含一些矩阵重新排序算法. 官网：​taiyun/corrplot
+rgl - R中3D可视化系统. 官网：​CRAN - Package rgl
+Cairo - 一个使用cairo组件创建高质量显示输出的R图形包. 官网：​CRAN - Package Cairo
+extrafont - 在R中图像中使用字体的工具. 官网：​wch/extrafont
+showtext - 让R图形设备显示文本的时候使用系统字体. 官网：​yixuan/showtext
+animation - 一个使用 ImageMagick在R中产生动画图形的工具. 官网：​animation by yihui
+gganimate - 用ggplot2创建简单的动画. 官网：​dgrtwo/gganimate
+misc3d - 强大的3D绘图工具. 官网：​CRAN - Package misc3d
+xkcd - 在图表中使用xkcd风格. 官网：​CRAN - Package xkcd
+imager - 一个基于CImg库的图像处理包. 官网：http://dahtah.github.io/imager/
+5.HTML部件
+d3heatmap - 使用D3绘制互动的热图. 官网：rstudio/d3heatmap
+DataTables - 将R矩阵或数据框作为交互的HTML表. 官网：DT: An R interface to the DataTables library
+DiagrammeR - 在R中创建JS图表和流程图. 官网：​rich-iannone/DiagrammeR
+dygraphs - 在R中绘制时间序列数据图形. 官网：​rstudio/dygraphs
+formattable - 可格式化的数据结构. 官网：​formattable by renkun-ken
+ggvis - R中交互式的图形处理语法. 官网：​rstudio/ggvis
+Leaflet - 一个非常流行的交互式地图JavaScript组件. 官网：​Leaflet for R - Introduction
+MetricsGraphics - 可以轻松创建D3散点图、折线图和直方图. 官网：​http://hrbrmstr.github.io/metricsgraphics/
+networkD3 - D3 JavaScriptR网络图. 官网：​http://christophergandrud.github.io/networkD3/
+scatterD3 - D3 互动散点图. 官网：​juba/scatterD3
+plotly - 使用plot.ly进行交互式ggplot2和Shiny绘图. 官网：​ropensci/plotly
+rCharts - 交互式JS绘图. 官网：​ramnathv/rCharts
+rbokeh - Bokeh的R接口. 官网：​rbokeh
+threejs - 交互式3D散点图和地球仪. 官网：​bwlewis/rthreejs
+timevis - 创建完全交互式的时间轴可视化图形. 官网：​daattali/timevis
+visNetwork - 使用vis.js类库进行网络可视化. 官网：​datastorm-open/visNetwork
+6.复用组件研究
+knitr - R中简单的动态报表生成工具. 官网：​knitr: Elegant, flexible and fast dynamic report generation with R
+xtable - 将表格导出到LaTeX或者HTML. 官网：​CRAN - Package xtable
+rapport - 一个R模版系统. 官网：​rapport: an R templating system
+rmarkdown - R动态文档工具. 官网：R Markdown
+slidify - 创建和发布漂亮的html5展示效果. 官网：​ramnathv/slidify
+Sweave - 使用R创建LaTeX报表的R包. 官网：​LMU - Prof. Friedrich Leisch
+texreg - 在LaTex和HTML中格式化统计模型. 官网：​texreg: Conversion of Statistical Model Output in R to LaTeX and HTML Tables
+checkpoint - 从检查点快照服务器安装包. 官网：​RevolutionAnalytics/checkpoint
+brew - 报告模板的生成框架.可以和knitr合并. 官网：​CRAN - Package brew
+ReporteRs - 一个生成微软Word, PowerPoint和HTML报表的R包. 官网：​Microsoft Word and PowerPoint Documents Generation • ReporteRs package
+bookdown - 使用R Markdown编写书籍. 官网：​bookdown: Easy Book Publishing with R Markdown
+ezknitr - 避免使用'knitr'带来的工作目录的痛苦. 官网：​ropensci/ezknitr
+7.Web技术和服务
+Web Technologies List - 关于如何使用R和网络的相关信息. 官网：​ropensci/webservices
+shiny - 使用R创建简单的Web交互应用. 官网：​rstudio/shiny
+RCurl - 常规的网络客户端接口 (HTTP/FTP/...) . 官网：​CRAN - Package RCurl
+httr - 使用更加友好的RCurl封装. 官网：​hadley/httr
+httpuv - HTTP和WebSocket服务程序. 官网：​rstudio/httpuv
+XML - R中生成和解析XML的工具. 官网：​CRAN - Package XML
+rvest - 简单的web信息抓取,使用CSSSelect 和 XPath 语法. 官网：​hadley/rvest
+OpenCPU - HTTP API. 官网：​Producing and Reproducing Results
+Rfacebook - Facebook API. 官网：​pablobarbera/Rfacebook
+RSiteCatalyst - Adobe 分析服务的R语言客户端. 官网：​randyzwitch/RSiteCatalyst
+plumber - 一个将现有的R代码转换为API的包. 官网：​trestletech/plumber
+8.并行计算
+parallel - R语言高性能的并行计算平台. multicore and snow. 官网：​CRAN Task View: High-Performance and Parallel Computing with R
+Rmpi - Rmpi对MPI APIS提供了一个包装过的接口,它也提供一个交互式的R环境. 官网：​CRAN - Package Rmpi
+foreach - 使用并行来执行循环. 官网：​CRAN - Package foreach
+SparkR - R for Spark. 官网：​amplab-extras/SparkR-pkg
+DistributedR - 一个来自惠普Vertica Analytics团队的可伸缩的高性能平台. 官网：​vertica/DistributedR
+ddR - 提供分布式数据结构,简化了R中的分布式计算. 官网：​vertica/ddR
+sparklyr - 来自RStudio的Spark接口. 官网：​http://spark.rstudio.com/
+9.高性能
+Rcpp - Rcpp在R中提供了一个高效的API,使得函数更快执行. 官网：​Seamless R and C++ Integration
+Rcpp11 - Rcpp11完全重新设计,以C++11为目标. 官网：​Rcpp11/Rcpp11
+compiler - 使用JIT提高R代码的速度. 官网：​http://spark.rstudio.com/
+10.语言API
+rJava - R语言对JAVE接口. 官网：​CRAN - Package rJava
+jvmr - 集成了R, Java, and Scala. 官网：​cran/jvmr
+rJython - R语言对Python/Jython的接口. 官网：​CRAN - Package rJython
+rPython - 允许R调用Python. 官网：​CRAN - Package rPython
+runr - 在R中运行Julia和Bash. 官网：​yihui/runr
+RJulia - R中调用Julia. 官网：​armgong/rjulia
+RinRuby - 一个Ruby库,整合了R用Ruby解释器. 官网：​https://sites.google.com/a/ddahl.org/rinruby-users/
+R.matlab - 读写mat文件,将R和Matlab连接到一起. 官网：​CRAN - Package R.matlab
+RcppOctave -Octave and Matlab的接口. 官网：​renozao/RcppOctave
+RSPerl - 双向接口,R中调用Perl和在Perl中调用R. 官网：​http://www.omegahat.org/RSPerl/
+V8 - 嵌入JavaScript引擎. 官网：​jeroenooms/V8
+htmlwidgets - R中把JavaScript数据可视化的最好方法. 官网：​htmlwidgets for R
+rpy2 - Python对R的接口. 官网：​http://rpy.sourceforge.net/
+11.数据库管理
+RODBC - R中ODBC数据库范围. 官网：​CRAN - Package RODBC
+DBI - 在R和数据库管理系统之间定义一个公共的接口. 官网：​rstats-db/DBI
+elastic - Elasticsearch HTTP API的包装器. 官网：​ropensci/elastic
+mongolite - R中Mongo客户端. 官网：​jeroenooms/mongolite
+RMySQL - R语言的MySQL数据库接口. 官网：​CRAN - Package RMySQL
+ROracle - R中Oracle数据库的接口. 官网：​CRAN - Package ROracle
+RPostgreSQL - R语言的PostgreSQL数据库系统接口. 官网：​https://code.google.com/p/rpostgresql/
+RSQLite - R语言SQLite数据库接口. 官网：​CRAN - Package RSQLite
+RJDBC - 通过JDBC接口访问数据库. 官网：​http://cran.r-project.org/web/packages/RJDBC/
+rmongodb - R中MongoDB驱动. 官网：​dselivanov/rmongodb
+rredis - R中Redis驱动. 官网：​CRAN - Package rredis
+RCassandra -Apache Cassanda直接接口(不是JAVA)，提供了最多的基本功能. 官网：​CRAN - Package RCassandra
+RHive - 通过Apache Hive的R扩展促进分布式计算. 官网：​nexr/RHive
+RNeo4j - Neo4j图形数据库驱动. 官网：​nicolewhite/RNeo4j
+12.机器学习
+AnomalyDetection - 来自Twitter的AnomalyDetection R包. 官网：​twitter/AnomalyDetection
+ahaz - 半参数添加风险回归的正则化. 官网：​CRAN - Package ahaz
+arules - 挖掘关联规则和频繁项集. 官网：​CRAN - Package arules
+bigrf - 大随机森林:大型数据集的分类和回归森林. 官网：​CRAN - Package bigrf
+bigRR - 广义回归(特殊是在p >> n情况下). 官网：​CRAN - Package bigRR
+bmrm - 风险最小化方案的正规化方法. 官网：​CRAN - Package bmrm
+Boruta - 所有相关的特征选择算法的一个封装 . 官网：​CRAN - Package Boruta
+BreakoutDetection - Breakout Detection via Robust E-Statistics from Twitter.[暂时不明真相] 官网：​twitter/BreakoutDetection
+bst - 梯度增加. 官网：​CRAN - Package bst
+CausalImpact - 利用贝叶斯时间序列结构模型进行因果推断. 官网：​google/CausalImpact
+C50 - C5.0决策树和基于规则的模型. 官网：​CRAN - Package C50
+caret - 分类和回归训练. 官网：​CRAN - Package caret
+Clever Algorithms For Machine Learning
+CORElearn - 分类、回归、特征评价和排序. 官网：​CRAN - Package CORElearn
+CoxBoost - Cox models by likelihood based boosting for a single survival endpoint or competing risks. 官网：​CRAN - Package CoxBoost
+Cubist - 规则和基于实例的回归建模. 官网：​CRAN - Package Cubist
+e1071 - Misc统计函数 (e1071),主要功能有类别分析、傅里叶变换,模糊聚类,支持向量机,最短路径计算,朴素贝叶斯分类器等等. 官网：​CRAN - Package e1071
+earth - 多元自适应回归模型. 官网：CRAN - Package earth
+elasticnet - 稀疏估计和稀疏主成分分析. 官网：CRAN - Package elasticnet
+ElemStatLearn - 书籍"The Elements of Statistical Learning, Data Mining, Inference, and Prediction"中的数据集,函数和例子. 官网：CRAN - Package ElemStatLearn
+evtree - 全局最优树的进化学习. 官网：CRAN - Package evtree
+forecast - 使用ARIMA, ETS, STLM, TBATS,和神经网络进行时间序列预测. 官网：CRAN - Package forecast
+forecastHybrid - 使用"forecast"包对ARIMA, ETS, STLM, TBATS,和神经网络模型进行交叉检验. 官网：CRAN - Package forecastHybrid
+FSelector - 一个基于subset-search或特性排名方法的特征选择框架. 官网：​CRAN - Package FSelector
+frbs - 使用模糊规则系统处理分类和回归的任务. 官网：​CRAN - Package frbs
+GAMBoost -　　基于广义线性和加法模型. 官网：CRAN - Package GAMBoost
+gamboostLSS - GAMLSS方法的改善. 官网：CRAN - Package gamboostLSS
+gbm - 改善广义线性模型. 官网：CRAN - Package gbm
+glmnet - Lasso 和 elastic-net正规化广义线性模型. 官网：CRAN - Package glmnet
+glmpath - L1 Regularization Path for Generalized Linear Models and Cox Proportional Hazards Model. 官网：CRAN - Package glmpath
+GMMBoost - 广义混合模型. 官网：CRAN - Package GMMBoost
+grplasso - Fitting user specified models with Group Lasso penalty. 官网：CRAN - Package grplasso
+grpreg - Regularization paths for regression models with grouped covariates. 官网：CRAN - Package grpreg
+h2o - Deeplearning, Random forests, GBM, KMeans, PCA, GLM. 官网：CRAN - Package h2o
+hda - 异方差判别分析. 官网：​CRAN - Package hda
+ipred - 预测器改进. 官网：​CRAN - Package ipred
+kernlab - kernlab: 基于内核学习的机器实验室. 官网：​CRAN - Package kernlab
+klaR - 分类和可视化. 官网：​CRAN - Package klaR
+kohonen - 监督和非监督自组织映射. 官网：​CRAN - Package kohonen
+lars - Least Angle Regression, Lasso and Forward Stagewise. 官网：​CRAN - Package lars
+lasso2 - L1 constrained estimation aka ‘lasso’. 官网：​CRAN - Package lasso2
+LiblineaR - 基于C/C++库的线性预测模型. 官网：​CRAN - Package LiblineaR
+lme4 - Mixed-effects models. 官网：​lme4/lme4
+LogicReg - 逻辑回归模型. 官网：​CRAN - Package LogicReg
+maptree - 映射、修剪和图形树模型. 官网：​CRAN - Package maptree
+mboost - Model-Based Boosting. 官网：​CRAN - Package mboost
+Machine Learning For Hackers
+mvpart - Multivariate partitioning. 官网：​CRAN - Package mvpart
+MXNet - MXNet brings flexible and efficient GPU computing and state-of-art deep learning to R. 官网：​dmlc/mxnet
+ncvreg - Regularization paths for SCAD- and MCP-penalized regression models. 官网：​CRAN - Package ncvreg
+nnet - eed-forward Neural Networks and Multinomial Log-Linear Models. 官网：CRAN - Package nnet
+oblique.tree - Oblique Trees for Classification Data. 官网：CRAN - Package oblique.tree
+pamr - Pam: 小矩阵预测分析. 官网：CRAN - Package pamr
+party - A Laboratory for Recursive Partytioning. 官网：CRAN - Package party
+partykit - A Toolkit for Recursive Partytioning. 官网：CRAN - Package partykit
+penalized - L1 (lasso and fused lasso) and L2 (ridge) penalized estimation in GLMs and in the Cox model. 官网：CRAN - Package penalized
+penalizedLDA - Penalized classification using Fisher's linear discriminant. 官网：CRAN - Package penalizedLDA
+penalizedSVM - 使用惩罚函数的特征选择支持向量机. 官网：CRAN - Package penalizedSVM
+quantregForest - quantregForest: Quantile Regression Forests. 官网：CRAN - Package quantregForest
+randomForest - 随机森林: Breiman and Cutler's random forests for classification and regression. 官网：CRAN - Package randomForest
+randomForestSRC - randomForestSRC: Random Forests for Survival, Regression and Classification (RF-SRC). 官网：CRAN - Package randomForestSRC
+rattle - 图形界面式的数据挖掘工具. 官网：CRAN - Package rattle
+rda - Shrunken Centroids Regularized Discriminant Analysis. 官网：CRAN - Package rda
+rdetools - Relevant Dimension Estimation (RDE) in Feature Spaces. 官网：CRAN - Package rdetools
+REEMtree - Regression Trees with Random Effects for Longitudinal (Panel) Data. 官网：CRAN - Package REEMtree
+relaxo - Relaxed Lasso. 官网：CRAN - Package relaxo
+rgenoud - R version of GENetic Optimization Using Derivatives. 官网：​CRAN - Package rgenoud
+rgp - R基因编程框架. 官网：​CRAN - Package rgp
+Rmalschains - 使用本地文化基因算法进行连续问题优化.[这里翻译不准]. Search Chains (MA-LS-Chains) in R. 官网：​CRAN - Package Rmalschains
+rminer - 在分类和回归问题中简单的使用数据挖掘方法(如神经网络和支持向量机). 官网：​CRAN - Package rminer
+ROCR - 可视化评分分类器的性能. 官网：​CRAN - Package ROCR
+RoughSets - 使用粗糙集和模糊粗糙集理论进行数据分析. 官网：​CRAN - Package RoughSets
+rpart - Recursive Partitioning and Regression Trees. 官网：​CRAN - Package rpart
+RPMM - Recursively Partitioned Mixture Model. 官网：​CRAN - Package RPMM
+RSNNS - Neural Networks in R using the Stuttgart Neural Network Simulator (SNNS). 官网：​CRAN - Package RSNNS
+Rsomoclu - Parallel implementation of self-organizing maps. 官网：​CRAN - Package Rsomoclu
+RWeka - Weka的R接口(Weka是基于JAVA环境下开源的机器学习以及数据挖掘软件). 官网：​CRAN - Package RWeka
+RXshrink - RXshrink: Maximum Likelihood Shrinkage via Generalized Ridge or Least Angle Regression. 官网：​CRAN - Package RXshrink
+sda - Shrinkage Discriminant Analysis and CAT Score Variable Selection. 官网：​CRAN - Package sda
+SDDA - Stepwise Diagonal Discriminant Analysis. 官网：​CRAN - Package SDDA
+SuperLearner and subsemble - Multi-algorithm ensemble learning packages. 官网：​ecpolley/SuperLearner
+svmpath - svmpath: the SVM Path algorithm. 官网：​CRAN - Package svmpath
+tgp - Bayesian treed Gaussian process models. 官网：​CRAN - Package tgp
+tree - 分类和回归树. 官网：CRAN - Package tree
+varSelRF - 使用随机森林进行变量选择. 官网：​CRAN - Package varSelRF
+xgboost - eXtreme Gradient Boosting Tree model, well known for its speed and performance. 官网：​tqchen/xgboost
+13.自然语言处理
+text2vec - 一个快速文本挖掘框架。 Fast Text Mining Framework for Vectorization and Word Embeddings. 官网：​dselivanov/text2vec
+tm - 一个全面的文本挖掘框架. 官网：​CRAN - Package tm
+openNLP - Apache OpenNLP工具接口. 官网：​CRAN - Package openNLP
+koRpus - 一个文本分析的R包. 官网：​CRAN - Package koRpus
+zipfR - 词频分布统计模型. 官网：​CRAN - Package zipfR
+NLP - 基本自然语言处理功能. 官网：CRAN - Package NLP
+LDAvis - 主题模型的交互式可视化. 官网：​cpsievert/LDAvis
+topicmodels - Topic modeling interface to the C code developed by by David M. Blei for Topic Modeling (Latent Dirichlet Allocation (LDA), and Correlated Topics Models (CTM)). 官网：​CRAN - Package topicmodels
+syuzhet - Extracts sentiment from text using three different sentiment dictionaries. 官网：​CRAN - Package syuzhet
+SnowballC - Snowball stemmers based on the C libstemmer UTF-8 library. 官网：​CRAN - Package SnowballC
+quanteda - 文本数据的定量分析. 官网：​kbenoit/quanteda
+Topic Models Resources - 主题模型的学习和R相关资源. 官网：​trinker/topicmodels_learning
+NLP for - NLP related resources in R. @Chinese. 官网：​BZRLC/R-notes
+14.贝叶斯
+coda - 输出MCMC(马尔可夫链蒙特卡尔理论)的分析和诊断信息. 官网：​CRAN - Package coda
+mcmc - 马尔可夫链蒙特卡尔理论(MCMC). 官网：​CRAN - Package mcmc
+MCMCpack - 马尔可夫链蒙特卡尔理论 (MCMC). 官网：​MCMCpack
+R2WinBUGS - 在在R/S-PLUS中打开WinBUGS 和 OpenBUGS. 官网：​CRAN - Package R2WinBUGS
+BRugs - OpenBUGS MCMC 软件的R接口. 官网：​CRAN - Package BRugs
+rjags - JAGS MCMC组件的R接口. 官网：​CRAN - Package rjags
+rstan - Stan MCMC软件的R接口. 官网：​RStan
+15.最优化
+minqa - Derivative-free optimization algorithms by quadratic approximation. 官网：​CRAN - Package minqa
+nloptr - 一个免费开源的非线性最优化程序包. 官网：​CRAN - Package nloptr
+lpSolve - Lp_solve解决线性和整形问题的R接口. 官网：​CRAN - Package lpSolve
+16.金融
+quantmod - 定量金融模型和交易框架. 官网：​Quantitative Financial Modelling Framework
+TTR - 技术交易规相关的数据和功能函数. 官网：​CRAN - Package TTR
+PerformanceAnalytics - 计量经济学性能和风险分析工具. 官网：​CRAN - Package PerformanceAnalytics
+zoo - S3 Infrastructure for Regular and Irregular Time Series. 官网：​CRAN - Package zoo
+xts - 可扩展的时间序列. 官网：​CRAN - Package xts
+tseries - 金融时间序列分析和计算. 官网：​CRAN - Package tseries
+fAssets - 金融资产分析和建模. 官网：​CRAN - Package fAssets
+17.生物信息学
+Bioconductor - 用于分析和理解高通量基因组数据的工具. 官网：Bioconductor - Home
+genetics - 处理基因数据的R包. 官网：​CRAN - Package genetics
+gap - 一个人口家庭遗传数据分析的综合工具. 官网：​CRAN - Package gap
+ape - 分子系统学和进化分析. 官网：​CRAN - Package ape
+pheatmap - 一个使用简单的热图工具. 官网：CRAN - Package pheatmap
+ddpcr - Analysis and visualization of Droplet Digital PCR data. 官网：​daattali/ddpcr
+18.网络分析
+Network Analysis List - 网络分析相关资源. 官网：​briatte/awesome-network-analysis
+igraph - 一个网络分析工具集合. 官网：igraph R package
+network - 一个操作数据关系的基本工具. 官网：CRAN - Package network
+sna - 基本的网络测量和可视化工具. 官网：CRAN - Package sna
+netdiffuseR - 网络扩散的分析工具. 官网：USCCANA/netdiffuseR
+networkDynamic - 支持动态和时序网络. 官网：CRAN - Package networkDynamic
+ndtv - 构建动画的可视化动态网络工具,支持多种数据格式. 官网：​CRAN - Package ndtv
+statnet - 大量网络数据的分析,仿真和可视化工具. 官网：​Statnet
+ergm - 指数随机图模型. 官网：​CRAN - Package ergm
+latentnet - Latent position and cluster models for network objects. 官网：​CRAN - Package latentnet
+tnet - Network measures for weighted, two-mode and longitudinal networks. 官网：​CRAN - Package tnet
+rgexf - 从R导出网络对象到GEXF, for manipulation with network software like Gephi or Sigma. 官网：​gvegayon / rgexf / wiki / Home
+visNetwork - 使用vis.js类库进行网络可视化. 官网：​datastorm-open/visNetwork
+19.R 开发
+Package Development List - 提高整体开发能力的包. 官网：​ropensci/PackageDevelopment
+devtools - 然R开发人员的生活变得更简单的工具. 官网：​hadley/devtools
+testthat - 一个R包测试工具. 官网：​hadley/testthat
+R6 - simpler, faster, lighter-weight alternative to R's built-in classes. 官网：​wch/R6
+pryr - Make it easier to understand what's going on in R. 官网：​hadley/pryr
+roxygen - 在函数定义中描述说明. 官网：​klutometis/roxygen
+lineprof - R中在线分析结果可视化. 官网：​hadley/lineprof
+packrat - 让R项目更加简单,便携和可重构的工具. 官网：​rstudio/packrat
+installr - R中按照软件的相关函数(Windows平台). 官网：​talgalili/installr
+import - R的导入机制. 官网：​smbache/import
+modules - 另外一个R模块系统(Python风格). 官网：​klmr/modules
+Rocker - R configurations for Docker. 官网：rocker-org
+RStudio Addins - RStudio插件列表. 官网：​daattali/addinslist
+drat - Creation and use of R repositories on 使用R在GitHub或其他平台创建和使用仓储. 官网：eddelbuettel/drat
+covr - Test coverage for your R package and (optionally) upload the results to coveralls or codecov. 官网：jimhester/covr
+lintr - R静态代码分析. 官网：jimhester/lintr
+staticdocs - 为一个R包生成静态html文档. 官网：hadley/pkgdown
+20.日志
+futile.logger - R中类似log4j的日志记录包. 官网：zatonovo/futile.logger
+log4r - R中的log4j接口. 官网：johnmyleswhite/log4r
+logging - 一个在R中实现log4j的日志处理包. 官网：CRAN - Package logging
+21.数据包
+engsoccerdata - 英国和欧洲联赛结果数据(1871-2016年). 官网：jalapic/engsoccerdata
+gapminder - 从Gapminder摘录的数据集. 官网：jennybc/gapminder
+22.其他工具
+git2r - 在R中使用git. 官网：ropensci/git2r
+23.其他编译器
+CXXR - Refactorising R into C++. 官网：CXXR: Refactorising R into C++
+fastR - FastR is an implementation of the R Language in Java atop Truffle and Graal. 官网：allr / FastR / wiki / Home
+incanter - Clojure-based, R-like statistical computing and graphics environment for the JVM with Lisp spirit. 官网：incanter/incanter
+pqR - 一个更快的R实现. 官网：pqR - a pretty quick version of R
+renjin - 一个基于JVM的R编译器. 官网：Renjin.org | The JVM-based interpreter for the R language for statistical computing
+rho - Refactor the interpreter of the R language into a fully-compatible, efficient, VM for R. 官网：rho-devel/rho
+riposte - 一个R快速编译和JIT工具. 官网：jtalbot/riposte
+RRO - R革命性开放平台(Microsoft R Open). 官网：Microsoft R Open: The Enhanced R Distribution
+TERR - R的TIBCO企业运行环境. 官网：TIBCO Spotfire - TIBCO Enterprise Runtime for R (TERR)
+24.R学习
+swirl - 一个在R控制台中交互式学习指南. 官网：swirl: Learn R, in R.
+DataScienceR - 一个数据科学,神经网络,和机器学习的指南. 官网：ujjwalkarn/DataScienceR
+25.资源
+25.1 网站
+R-project - R 项目的官方网站. 官网：The R Project for Statistical Computing
+R Bloggers - R语言的一个综合性博客网站. 官网：R-bloggers
+DataCamp - 在线学习R数据分析. 官网：Learn R, Python & Data Science Online | DataCamp
+Quick-R - 一个非常好的快速参考手册. 官网：Quick-R: Home Page
+Advanced R - 书籍高级R编程的在线版. 官网：Welcome · Advanced R.
+Efficient R Programming - 书籍"Efficient R Programming"的在线主页. 官网：Efficient R programming
+CRAN Task Views - CRAN包的任务列表. 官网：CRAN Task Views
+The R Programming Wikibook - 一个R协作手册 官网：Wikibooks, open books for an open world
+R-users - R语言的求职板块. 官网：Jobs for R-users
+R Cookbook - 一个R问答网站,由[R Graphics Cookbook]进行支持(http://shop.oreilly.com/product/0636920023135.do). 官网：Cookbook for R
+tryR - 快速开始使用R. 官网：Try R
+RDocumentation - 使用RDocumentation搜索所有的CRAN, Bioconductor, Github包和文档. 官网：RDocumentation
+25.2 书籍
+R Books List - R相关书籍清单. 官网：RomanTsegelskyi/rbooks
+The Art of R Programming - 一个很好的资源,可以系统地学习基础类型的对象,控制语句,变量的范围,以及调试等. 官网：The Art of R Programming
+Free Books - CRAN贡献的多种语言文档. Contributed Documentation in many languages. 官网：Contributed Documentation
+R Cookbook - 快速简单的介绍R及相关常见的统计任务. 官网：R Cookbook
+Johns Hopkins编写的数据科学专业的一部分教程:
+Exploratory Data Analysis with R - 基本的各种数据分析技能. * R Programming for Data Science - 依赖于R的一些高级数据分析. * Report Writing for Data Science in R - R语言的报表生成和可重用组件研究. 官网：Exploratory Data Analysis… by Roger D. Peng [PDF/iPad/Kindle]
+R Packages - 一个用R包编写的书籍 (有论文和网站2钟格式). 官网：Welcome · R packages
+R in Action - 一本旨在帮助所有级别R用户的书籍. 官网：R in Action, Second Edition
+Use R! - This series of inexpensive and focused books from Springer publish shorter books aimed at practitioners. Books can discuss the use of R in a particular subject area, such as Bayesian networks, ggplot2 and Rcpp. 官网：Use R! (Titles in this series)
+R for SAS and SPSS users - 一个对已经熟悉SAS和SPASS用户的资源库. 官网：Free Version
+An Introduction to R - 一个很好的介绍R的文章,也涵盖了一些高级主题. 官网：https://cran.r-project.org/doc/manuals/R-intro.pdf
+Introduction to Statistical Learning with Application in R - A simplified and "operational" version of The Elements of Statistical Learning. Free softcopy provided by its authors. 官网：Introduction to Statistical Learning
+The R Inferno - Patrick Burns gives insight into R's ins and outs along with its quirks! 官网：http://www.burns-stat.com/pages/Tutor/R_inferno.pdf
+R for Data Science - Free book from RStudio developers with emphasis on data science workflow. 官网：R for Data Science
+25.3 博客
+Not So Standard Deviations - 数据科学博客
+@Roger Peng and @Hilary Parker.
+R World News - R行业的社区新闻,可以让你与时俱进.
+@Bob Rudis and @Jay Jacobs.
+The R-Podcast - 使用R的一些实践建议.
+@Eric Nantz.
+R Talk - 关于R语言和统计软件的新闻和讨论.
+@Oliver Keyes, @Jasmine Dumas, @Ted Hart and @Mikhail Popov.
+25.4 参考文献
+R Reference Card 2.0 - Material from R for Beginners by permission of Emmanuel Paradis (Version 2 by Matt Baggott). 官网：http://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf
+Regression Analysis Refcard - R Reference Card for Regression Analysis. 官网：http://cran.r-project.org/doc/contrib/Ricci-refcard-regression.pdf
+Reference Card for ESS - Reference Card for ESS. 官网：http://ess.r-project.org/refcard.pdf
+R Markdown Cheat sheet - Quick reference guide for writing reports with R Markdown. 官网：http://shiny.rstudio.com/images/rm-cheatsheet.pdf.zip
+Shiny Cheat sheet - Quick reference guide for building Shiny apps. 官网：http://shiny.rstudio.com/images/cheatsheet.pdf.zip
+ggplot2 Cheat sheet - Quick reference guide for data visualisation with ggplot2. 官网：https://www.rstudio.com/wp-content/uploads/2015/08/ggplot2-cheatsheet.pdf
+devtools Cheat sheet - Quick reference guide to package development in R. 官网：https://www.rstudio.com/wp-content/uploads/2015/06/devtools-cheatsheet.pdf
+25.5 网络课程
+The Analytics Edge - Hands-on introduction to data analysis with R from MITx. 官网：The Analytics Edge
+Johns Hopkins University Data Science Specialization - 9 courses including: Introduction to R, literate analysis tools, Shiny and some more. 官网：Specialization | Coursera
+HarvardX Biomedical Data Science - Introduction to R for the Life Sciences. 官网：HarvardX Biomedical Data Science Open Online Training Curriculum launches on January 19
+Explore Statistics with R - Covers introduction, data handling and statistical analysis in R. 官网：Explore Statistics with R
+25.6 列表
+Books - R书籍清单. 官网：RomanTsegelskyi/rbooks
+DataScienceR - R数据科学、神经网络和机器学习的指南清单. 官网：ujjwalkarn/DataScienceR
+ggplot2 Extensions - ggplot2扩展案例. 官网：ggplot2 extensions
+Natural Language Processing - R. @Chinese中NLP 相关资源. 官网：BZRLC/R-notes
+Network Analysis - 网络分析相关资源. 官网：briatte/awesome-network-analysis
+Open Data - 使用R获取,转换,操作,创建和贡献数据. 官网：ropensci/opendata
+Posts - 创建R博客或者文章. 官网：qinwf/awesome-R
+Package Development - 提高包开发的资源工具. 官网：ropensci/PackageDevelopment
+R Project Conferences - 使用R的相关信息,DSC会议. 官网：R: Conferences
+RStartHere - 一些非常有用的R包指南. 官网：rstudio/RStartHere
+RStudio Addins - RStudio插件清单. 官网：daattali/addinslist
+Topic Models - 主题模型的学习和R相关资源. 官网：trinker/topicmodels_learning
+Web Technologies - 如何使用R和万维网的信息. 官网：ropensci/webservices
+
+大家也可以加小编微信：tswenqu，进R语言中文社区 交流群。
